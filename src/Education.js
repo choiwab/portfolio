@@ -11,13 +11,19 @@ const Education = () => {
       school: 'NATIONAL UNIVERSITY OF SINGAPORE | Singapore',
       degree: 'Bachelor of Computing: Major in Computer Science',
       period: 'August 2023 - May 2027',
-      logo: nus
+      logo: nus,
+      details: [
+        'Relevant Coursework: Programming Methodology II, Data Structures & Algorithms, Introduction to Business Analytics, IT Management and Organisation, Calculus for Computing, Linear Algebra for Computing, Digital Ethics and Data Privacy'
+      ]
     },
     {
       school: 'NEW YORK UNIVERSITY | Abu Dhabi, UAE',
       degree: 'Bachelor of Science: Major in Computer Science with Minor in Applied Mathematics',
       period: 'August 2022 - June 2023',
-      logo: nyuad
+      logo: nyuad,
+      details: [
+        'Relevant Coursework: Introduction to Computer Science, Discrete Math, Human-Centered Data Science, Algorithms, Data Structures, Multivariable Calculus'
+      ]
     },
     {
       school: 'Seoul Global High School | Republic of Korea',

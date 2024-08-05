@@ -14,7 +14,7 @@ const Experience = () => {
           target="_blank"
           rel="noopener noreferrer"
           style={{
-            color: '#1976d2', // Change this to your desired color
+            color: '#61dafb', // Change this to your desired color
             textDecoration: 'none',
           }}
           onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}
@@ -27,7 +27,7 @@ const Experience = () => {
       period: 'May 2024 - August 2024',
       description: (
         <ul>
-          <li>Developed and deployed a data categorization engine using Python, Jupyter Notebook, and Streamlit, enhancing procurement data classification by cleaning and mapping data from databases consisting of over 4 million data points, creating comprehensive dictionaries, and leveraging NLTK for keyword analysis to improve data accuracy and usability</li>
+          <li>Developed and deployed a data categorization engine using Python, Jupyter Notebook, and Streamlit, enhancing procurement data classification by cleaning and mapping data from databases consisting of over 4 million data points, utilizing XGBoost to predict unclassified data categories, creating comprehensive dictionaries, and leveraging NLTK for keyword analysis to improve data accuracy and usability</li>
           <li>Engineered and implemented a Python-based engine to process and consolidate multiple Excel price books into a single file, featuring color-coded price changes and discount rate analysis</li>
         </ul>
       ),
@@ -41,7 +41,7 @@ const Experience = () => {
           target="_blank"
           rel="noopener noreferrer"
           style={{
-            color: '#1976d2', // Change this to your desired color
+            color: '#61dafb', // Change this to your desired color
             textDecoration: 'none',
           }}
           onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}
@@ -68,7 +68,7 @@ const Experience = () => {
           target="_blank"
           rel="noopener noreferrer"
           style={{
-            color: '#1976d2', // Change this to your desired color
+            color: '#61dafb', // Change this to your desired color
             textDecoration: 'none',
           }}
           onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}

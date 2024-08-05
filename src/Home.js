@@ -4,7 +4,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Element, Link } from 'react-scroll';
 import ProfilePic from './public/Jaehyeok-Choi Profile Photo.jpg'; // replace with your profile picture path
-import bjjpic from './public/bjj.jpg'
+import bjjpic from './public/bjj.jpg';
 import './App.css'; // Import the CSS file
 import MapComponent from './MapComponent';
 
@@ -50,15 +50,12 @@ const Home = () => {
           <Box sx={{ display: 'flex', justifyContent: 'space-around', marginTop: 2, width: '75%', height:'40%' }}>
             <MapComponent /> {/* Insert the MapComponent */}
           </Box>
-          <Grid container sx={{ width: '100%', marginTop: 2 }}>
-            <Grid item xs={6}>
-              <Box sx={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
-                <img src={bjjpic} alt="Jiujitsu" style={{ maxWidth: '100%', maxHeight: '30vh' }} />
-              </Box>
-              
+          <Grid container sx={{ width: '75%', marginTop: 2 }}>
+            <Grid item xs={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <img src={bjjpic} alt="Jiujitsu" style={{ maxWidth: '90%', maxHeight: '50vh' }} />
             </Grid>
-            <Grid item xs={6} sx={{ display: 'flex', alignItems: 'center' }}>
-              <Typography variant="body1" align="center" sx={{ marginLeft: 2, marginRight: 2 }}>
+            <Grid item xs={6} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}>
+              <Typography variant="body1" align="left" sx={{ marginLeft: 2 }}>
                 I like jiujitsu. (I got second place here)
               </Typography>
             </Grid>
