@@ -28,7 +28,7 @@ const Projects = () => {
   const projects = [
     {
       title: 'Eatwise',
-      description: 'My friend Javier Tan and I developed Eatwise, a diet tracking web app. We used React, CSS, and Next.js to build a dynamic frontend, while Firebase and Node.js powered the backend. We deployed Eatwise on Vercel. We integrated the FatSecret Platform REST API to provide accurate food data. We also added features like body type assessments, personalized calorie and nutrition goals, and historical data visualization. Thorough unit, manual, and integration testing ensured the app\'s reliability.',
+      description: 'My friend Javier Tan and I developed Eatwise, a diet tracking web app. We used React, CSS, and Next.js to build a dynamic frontend, while Firebase and Node.js powered the backend. We deployed Eatwise on Vercel.\nWe integrated the FatSecret Platform REST API to provide accurate food data. We also added features like body type assessments, personalized calorie and nutrition goals, and historical data visualization. Thorough unit, manual, and integration testing ensured the app\'s reliability.',
       link: 'https://eatwise.vercel.app/protected/Home',
       repoLink: 'https://github.com/Incogdino/EatWise', // Add GitHub repo link
       readmeLink: 'https://docs.google.com/document/d/1jGK9rGxmfrxFYeRkWvg3JMLQygjcFFpXhwCW8a1Kddg/edit', 
@@ -38,7 +38,7 @@ const Projects = () => {
     },
     {
       title: 'Easy Read Generator',
-      description: 'I engineered a Python-based AI application called Easy Read Generator using Streamlit. This app integrates LangChain and the GPT API to produce accessible reading content for individuals with mental disabilities. It includes web and text scraping tools to process and export resources, such as URLs and PDFs. This feature significantly enhances the app\'s adaptability and reach.',
+      description: 'I engineered a Python-based AI application called Easy Read Generator using Streamlit. This app integrates LangChain and the GPT API to produce accessible reading content for individuals with mental disabilities.\nIt includes web and text scraping tools to process and export resources, such as URLs and PDFs. This feature significantly enhances the app\'s adaptability and reach.',
       //link: 'https://easyread-mpmn4dn5gvyu77x6k6nqq5.streamlit.app/',
       repoLink: 'https://github.com/choiwab/Easy_Read', // Add GitHub repo link
       readmeLink: 'https://docs.google.com/document/d/1gGGssixoUiZYSGmtBh4g9TQB3A6xMpVU2vPgZ1XFwes/edit?usp=sharing', // Add README file link
@@ -103,7 +103,7 @@ const Projects = () => {
               </Grid>
               <Grid item xs={9}>
                 <Typography variant="h6">{projects[selectedProject].title}</Typography>
-                <Typography variant="body1">{projects[selectedProject].description}</Typography>
+                <Typography variant="body1" sx={{ whiteSpace: 'pre-line' }}>{projects[selectedProject].description}</Typography>
                 <Link href={projects[selectedProject].link} target="_blank" rel="noopener" sx={{ color: '#61dafb', display: 'block' }}>
                   Visit Project
                 </Link>

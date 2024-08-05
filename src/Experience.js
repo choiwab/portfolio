@@ -31,7 +31,7 @@ const Experience = () => {
           <li>Engineered and implemented a Python-based engine to process and consolidate multiple Excel price books into a single file, featuring color-coded price changes and discount rate analysis</li>
         </ul>
       ),
-      languages: ['Python', 'Jupyter Notebook', 'Streamlit'],
+      languages: ['Python', 'XGBoost', 'NumPy', 'Pandas', 'Jupyter Notebook', 'Streamlit'],
       logo: telenorpic,
     },
     {
@@ -84,7 +84,7 @@ const Experience = () => {
           <li>Identified target demographics by conducting market research, analyzing over 1,000 data points, which contributed to a 25% increase in market reach, while spearheading social media marketing initiatives that attracted over 3,000 new customers</li>
         </ul>
       ),
-      languages: ['Market Research', 'Social Media Marketing'],
+      languages: ['Excel', 'Market Research'],
       logo: bondit,
     },
   ];

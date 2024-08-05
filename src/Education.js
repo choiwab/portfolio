@@ -38,7 +38,7 @@ const Education = () => {
         'AP Psychology 5',
         'AP Microeconomics 5',
         'AP Macroeconomics 5',
-        'TOEFL 119'
+        'TOEFL 119/120'
       ]
     }
   ];
