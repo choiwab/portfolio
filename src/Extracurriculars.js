@@ -6,9 +6,20 @@ import hackad from './public/hackad.jpg';
 import roka from './public/roka.jpg';
 import mma from './public/nusmma.jpg';
 import aiClub from './public/aiclub.jpg';
+import nusfintech from './public/Nusfintech.jpg'
 
 const Extracurriculars = () => {
   const extracurriculars = [
+    {
+      activity: 'NUS Fintech Society | Singapore',
+      role: 'Tech Analyst',
+      period: 'August 2024 - Present',
+      details: [
+        'To be updated..'
+      ],
+      image: nusfintech,
+      link: 'https://fintechsociety.comp.nus.edu.sg/'
+    },
     {
       activity: 'NUS OPTIVER ALGORITHMIC TRADING CHALLENGE | Singapore',
       role: 'Leader',
