@@ -14,7 +14,7 @@ const Footer = () => {
               Phone: +65 90353055
             </Typography>
             <Typography variant="body2">
-              Address: 27 Prince George's Pk, National University of Singapore, Singapore 118425
+              Address: National University of Singapore, Singapore 118425
             </Typography>
           </Grid>
           <Grid item xs={12} md={4}>
