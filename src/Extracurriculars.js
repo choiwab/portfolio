@@ -16,7 +16,7 @@ const Extracurriculars = () => {
       period: 'August 2024 - Present',
       details: [
         'Working for machine learning team of Lenor (Financial Literacy Tutor Startup)',
-        'Utilized open source LLM models to intake user inputs and classify users into categories for efficient tutoring system'
+        'Utilized open source LLM models to intake user inputs and classify users into different leanring stages for efficient tutoring system'
       ],
       image: nusfintech,
       link: 'https://fintechsociety.comp.nus.edu.sg/'
