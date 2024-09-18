@@ -15,7 +15,8 @@ const Extracurriculars = () => {
       role: 'Tech Analyst',
       period: 'August 2024 - Present',
       details: [
-        'To be updated..'
+        'Working for machine learning team of Lenor (Financial Literacy Tutor Startup)',
+        'Utilized open source LLM models to intake user inputs and classify users into categories for efficient tutoring system'
       ],
       image: nusfintech,
       link: 'https://fintechsociety.comp.nus.edu.sg/'
@@ -52,7 +53,7 @@ const Extracurriculars = () => {
         'Spearheaded the development of an innovative AI model utilizing GPT API and Zapier, specifically designed to automatically send out Emails to clients using company-specific datasets',
         'Developed an AI model utilizing LangChain and GPT API to generate accessible reading materials for individuals with mental disabilities, integrating web scraping tools to process various resource formats including URLs and PDFs'
       ],
-      image: aiClub, 
+      image: aiClub,
       link: 'https://www.10xaiclub.com/'
     },
     {
