@@ -1,4 +1,4 @@
-# Jaehyeok Choi's Portfolio 👨‍💻
+# Jae's Portfolio 👨‍💻
 
 ### About Me
 I'm Jaehyeok Choi, a **Computer Science** student at the *National University of Singapore (NUS)*. This website showcases my skills and projects.
@@ -6,7 +6,7 @@ I'm Jaehyeok Choi, a **Computer Science** student at the *National University of
 ### 🌐 Portfolio Website
 > "The best way to predict the future is to create it." - Alan Kay
 
-Check out my portfolio here: [Jaehyeok's Portfolio](https://jaechoi.vercel.app/)
+Check out my portfolio here: [Jaehyeok's Portfolio](./src/public/Portfolio_homepage.jpg)
 
 <details>
 <summary>📸 Website Preview</summary>
@@ -27,9 +27,7 @@ Check out my portfolio here: [Jaehyeok's Portfolio](https://jaechoi.vercel.app/)
    - Email 📧
 
 ### 💡 Fun Fact
-Did you know? The first website went live on August 6, 1991![^1]
-
-[^1]: Source: CERN
+Did you know? The first website went live on August 6, 1991!
 
 ---
 
