@@ -6,7 +6,7 @@ I'm Jaehyeok Choi, a **Computer Science** student at the *National University of
 ### 🌐 Portfolio Website
 > "The best way to predict the future is to create it." - Alan Kay
 
-Check out my website here: [Jae's Portfolio](https://jaechoi.vercel.app/)
+Check out my website here: [Jae's Portfolio](https://jaechoi.vercel.app/){:target="_blank" rel="noopener noreferrer"}
 
 <details>
 <summary>📸 Website Preview</summary>
@@ -20,7 +20,7 @@ Check out my website here: [Jae's Portfolio](https://jaechoi.vercel.app/)
 - Deployed on **Vercel**
 
 ### 🧭 Navigation
-1. Click the menu button on the top left to view the site menu
+1. Click the menu button (three horizontal lines) on the top left to view the site menu
 2. Use the buttons on the top right to access my:
    - GitHub 🐙
    - LinkedIn 💼
