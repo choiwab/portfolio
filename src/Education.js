@@ -13,7 +13,7 @@ const Education = () => {
       period: 'August 2023 - May 2027',
       logo: nus,
       details: [
-        'Relevant Coursework: Programming Methodology II, Data Structures & Algorithms, Introduction to Business Analytics, IT Management and Organisation, Calculus for Computing, Linear Algebra for Computing, Digital Ethics and Data Privacy'
+        'Relevant Coursework: Software Engineering, Data Structures & Algorithms, Programming Methodology II, Computer Organization, Introduction to Business Analytics, IT Management and Organisation, Calculus for Computing, Linear Algebra for Computing, Digital Ethics and Data Privacy'
       ]
     },
     {

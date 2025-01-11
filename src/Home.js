@@ -30,9 +30,9 @@ const Home = () => {
         <Box sx={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', scrollSnapAlign: 'start' }}>
           <Typography variant="h2" align="center" sx={{ marginTop: 2 }}>About Me</Typography>
           <Typography variant="body1" align="left" sx={{ marginTop: 2, maxWidth: 600, whiteSpace: 'pre-line' }}>
-            I am a computer science student passionate about technology and developing innovative solutions. My interest lies in software development, data science, and machine learning.{"\n\n"}
+            I am a computer science student passionate about technology and developing innovative solutions. My interest lies in AI, software development, data science, and machine learning.{"\n\n"}
             I am always eager to not only deep dive into my interests but also explore new technologies.{"\n\n"}
-            I am currently looking for <span style={{ textDecoration: 'underline' }}>Software Engineering</span>, <span style={{ textDecoration: 'underline' }}>Data Science</span>, <span style={{ textDecoration: 'underline' }}>Machine Learning</span> internship for 2025. 
+            {/* I am currently looking for <span style={{ textDecoration: 'underline' }}>Software Engineering</span>, <span style={{ textDecoration: 'underline' }}>Data Science</span>, <span style={{ textDecoration: 'underline' }}>Machine Learning</span> internship for 2025. */}
           </Typography>
           <Link to="fun-facts" smooth={true} duration={500}>
             <IconButton className="bounce-arrow">
