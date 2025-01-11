@@ -4,9 +4,36 @@ import WorkIcon from '@mui/icons-material/Work';
 import telenorpic from './public/telenor.jpg';
 import paulacademy from './public/paulacademy.jpg';
 import bondit from './public/bondit.jpg';
+import continental from './public/continental.jpg';
 
 const Experience = () => {
   const experiences = [
+    {
+      company: (
+        <a
+          href="https://www.continental.com/en/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: '#61dafb',
+            textDecoration: 'none',
+          }}
+          onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}
+          onMouseOut={(e) => e.currentTarget.style.textDecoration = 'none'}
+        >
+          TELENOR
+        </a>
+      ),
+      title: 'Software Test Engineer Intern',
+      period: 'Jan 2025 - June 2025',
+      description: (
+        <ul>
+          <li>Developed AI model for test automation....(to be continued)</li>
+        </ul>
+      ),
+      languages: ['Python', 'LLM', 'Testing'],
+      logo: continental,
+    },
     {
       company: (
         <a
