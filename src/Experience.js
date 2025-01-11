@@ -28,7 +28,7 @@ const Experience = () => {
       period: 'Jan 2025 - June 2025',
       description: (
         <ul>
-          <li>Developed AI model for test automation....(to be continued)</li>
+          <li>Developed AI model for UX test automation....(to be continued)</li>
         </ul>
       ),
       languages: ['Python', 'LLM', 'Testing'],
