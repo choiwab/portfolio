@@ -21,7 +21,7 @@ const Experience = () => {
           onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}
           onMouseOut={(e) => e.currentTarget.style.textDecoration = 'none'}
         >
-          TELENOR
+          CONTINENTAL
         </a>
       ),
       title: 'Software Test Engineer Intern',
