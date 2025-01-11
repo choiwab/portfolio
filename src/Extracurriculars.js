@@ -15,7 +15,7 @@ const Extracurriculars = () => {
       role: 'Tech Analyst',
       period: 'August 2024 - Present',
       details: [
-        'Working for machine learning team of Lenor (Financial Literacy Tutor Startup)',
+        'Working for machine learning team of <a href="https://lenorai.com/" target="_blank" rel="noopener noreferrer">Lenor</a>  (Financial Literacy Tutor Startup)',
         'Designed a structured workflow for data generation and evaluation leveraging LLMs, focusing on scalability and accuracy',
         'Performed data generation and exploratory data analysis using open-source LLMs like Llama-3, employing a dual-model filtering technique (e.g. Llama and Gemini) for cross-validation and consistency checks to ensure data quality and reliability',
         'Developed a zero-shot classification pipeline utilizing the facebook/bart-large-mnli model to predict and assign relevance scores for each conversation dataset, optimizing performance through threshold calibration, confidence scoring, and comprehensive error analysis'
