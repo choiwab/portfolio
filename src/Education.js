@@ -13,16 +13,7 @@ const Education = () => {
       period: 'August 2023 - May 2027',
       logo: nus,
       details: [
-        'Relevant Coursework: Software Engineering, Data Structures & Algorithms, Programming Methodology II, Computer Organization, Introduction to Business Analytics, IT Management and Organisation, Calculus for Computing, Linear Algebra for Computing, Digital Ethics and Data Privacy'
-      ]
-    },
-    {
-      school: 'NEW YORK UNIVERSITY | Abu Dhabi, UAE',
-      degree: 'Bachelor of Science: Major in Computer Science with Minor in Applied Mathematics',
-      period: 'August 2022 - June 2023',
-      logo: nyuad,
-      details: [
-        'Relevant Coursework: Introduction to Computer Science, Discrete Math, Human-Centered Data Science, Algorithms, Data Structures, Multivariable Calculus'
+        'Relevant Coursework: Database Systems, Software Engineering, Data Structures & Algorithms, Programming Methodology II, Computer Organization, Introduction to Business Analytics, IT Management and Organisation, Calculus for Computing, Linear Algebra for Computing, Digital Ethics and Data Privacy'
       ]
     },
     {

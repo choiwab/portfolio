@@ -24,14 +24,16 @@ const Experience = () => {
           CONTINENTAL
         </a>
       ),
-      title: 'Software Test Engineer Intern',
+      title: 'Software Developer Intern',
       period: 'Jan 2025 - June 2025',
       description: (
         <ul>
-          <li>Developed AI model for UX test automation....(to be continued)</li>
+          <li>Worked for Test Service and Solution Team in UX Department</li>
+          <li>Developed an AI-driven Test Design Toolchain using a sequential workflow of LLM agents with fine-tuning and RAG on Azure AI, achieving 92% test case design accuracy</li>
+          <li>Engineered full-stack API integrations for an internal test automation platform, leveraging Python, SQL, Azure BlobStorage (backend) and React + TypeScript (frontend) to build an interactive interface for the Test Design AI pipeline, used by 300+ testers and boosting test generation efficiency by 76%</li>
         </ul>
       ),
-      languages: ['Python', 'LLM', 'Testing'],
+      languages: ['Azure AI', 'REACT', 'Typescript', 'APIs', 'LLMs', 'Sequential AI Workflow'],
       logo: continental,
     },
     {

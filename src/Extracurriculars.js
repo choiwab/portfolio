@@ -12,12 +12,13 @@ const Extracurriculars = () => {
   const extracurriculars = [
     {
       activity: 'NUS Fintech Society | Singapore',
-      role: 'Tech Analyst',
+      role: 'Tech Lead',
       period: 'August 2024 - Present',
       details: [
         // 'Working for machine learning team of <a href="https://lenorai.com/" target="_blank" rel="noopener noreferrer">Lenor</a>  (Financial Literacy Tutor Startup)',
+        'Leading a team to develop a multi-agent AI platform automating equity research using LLMs, LangChain, and financial APIs; overseeing architecture, agent orchestration with real-time news scraping, sentiment analysis, and sector insights.',
         <>
-          Working for machine learning team of{' '}
+          Worked for machine learning team of{' '}
           <Link href="https://lenorai.com/" target="_blank" rel="noopener noreferrer" sx={{ color: '#61dafb', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>
             Lenor
           </Link>{' '}
@@ -82,7 +83,7 @@ const Extracurriculars = () => {
     {
       activity: 'NUS MMA | Singapore',
       role: 'Vice Captain',
-      period: 'May 2024 - Present',
+      period: 'May 2024 - Dec 2024',
       details: [
         'Led weekly Brazilian Jiu-Jitsu training sessions, developing and delivering structured training plans for over 100 members',
         'Fostered team spirit through participation in internal and external competitions',
