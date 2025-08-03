@@ -11,9 +11,6 @@ const Footer = () => {
         <Grid container spacing={2} alignItems="center">
           <Grid item xs={12} md={4}>
             <Typography variant="body2">
-              Phone: +65 90353055
-            </Typography>
-            <Typography variant="body2">
               Address: National University of Singapore, Singapore 118425
             </Typography>
           </Grid>
