@@ -25,7 +25,7 @@ const Experience = () => {
         </a>
       ),
       title: 'Software Developer Intern',
-      period: 'Jan 2025 - June 2025',
+      period: 'Jan 2025 - August 2025',
       description: (
         <ul>
           <li>Worked for Test Service and Solution Team in UX Department</li>
