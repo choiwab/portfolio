@@ -15,18 +15,37 @@ const Extracurriculars = () => {
       role: 'Tech Lead',
       period: 'August 2024 - Present',
       details: [
-        // 'Working for machine learning team of <a href="https://lenorai.com/" target="_blank" rel="noopener noreferrer">Lenor</a>  (Financial Literacy Tutor Startup)',
-        'Leading a team to develop a multi-agent AI platform automating equity research using LLMs, LangChain, and financial APIs; overseeing architecture, agent orchestration with real-time news scraping, sentiment analysis, and sector insights.',
         <>
-          Worked for machine learning team of{' '}
-          <Link href="https://lenorai.com/" target="_blank" rel="noopener noreferrer" sx={{ color: '#61dafb', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>
-            Lenor
-          </Link>{' '}
-          (Financial Literacy Tutor Startup)
+          <Typography variant="subtitle2" sx={{ fontWeight: 'bold', color: '#61dafb', borderBottom: '1px solid #61dafb', paddingBottom: '4px', marginTop: '8px', marginBottom: '4px' }}>
+            📅 Aug 2025 - Present
+          </Typography>
+          <Typography variant="body2">
+            • Leading a team to develop a multi-agent AI platform automating equity research using LLMs, LangChain, and financial APIs; overseeing architecture, agent orchestration with real-time news scraping, sentiment analysis, and sector insights.
+          </Typography>
         </>,
-        'Designed a structured workflow for data generation and evaluation leveraging LLMs, focusing on scalability and accuracy',
-        'Performed data generation and exploratory data analysis using open-source LLMs like Llama-3, employing a dual-model filtering technique (e.g. Llama and Gemini) for cross-validation and consistency checks to ensure data quality and reliability',
-        'Developed a zero-shot classification pipeline utilizing the facebook/bart-large-mnli model to predict and assign relevance scores for each conversation dataset, optimizing performance through threshold calibration, confidence scoring, and comprehensive error analysis'
+        <>
+          <Typography variant="subtitle2" sx={{ fontWeight: 'bold', color: '#61dafb', borderBottom: '1px solid #61dafb', paddingBottom: '4px', marginTop: '8px', marginBottom: '4px' }}>
+            📅 Jan 2025 - May 2025
+          </Typography>
+          <Typography variant="body2">• Developed a stock price prediction model using time series analysis on candlestick patterns and technical indicators, leveraging pattern recognition to enhance forecasting accuracy.</Typography>
+          <Typography variant="body2">• Paramters used: candlestick patterns (Doji, Hammer, Shooting Star) and technical indicators (RSI, MACD, ATR, OBV).</Typography>
+          <Typography variant="body2"> • Models used: Implemented Logistic Regression, Random Forest, XGBoost, LSTM, and Temporal Fusion Transformer (TFT) to enhance forecasting accuracy, leveraging feature engineering and hyperparameter tuning for optimized performance.</Typography>
+        </>,
+        <>
+          <Typography variant="subtitle2" sx={{ fontWeight: 'bold', color: '#61dafb', borderBottom: '1px solid #61dafb', paddingBottom: '4px', marginTop: '8px', marginBottom: '4px' }}>
+            📅 Aug 2024 - Dec 2024
+          </Typography>
+          <Typography variant="body2" sx={{ marginBottom: '4px' }}>
+            • Worked for machine learning team of{' '}
+            <Link href="https://lenorai.com/" target="_blank" rel="noopener noreferrer" sx={{ color: '#61dafb', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>
+              Lenor
+            </Link>{' '}
+            (Financial Literacy Tutor Startup)
+          </Typography>
+          <Typography variant="body2">• Designed a structured workflow for data generation and evaluation leveraging LLMs, focusing on scalability and accuracy.</Typography>
+          <Typography variant="body2">• Performed data generation and exploratory data analysis using open-source LLMs like Llama-3, employing a dual-model filtering technique (e.g. Llama and Gemini) for cross-validation and consistency checks to ensure data quality and reliability.</Typography>
+          <Typography variant="body2">• Developed a zero-shot classification pipeline utilizing the facebook/bart-large-mnli model to predict and assign relevance scores for each conversation dataset, optimizing performance through threshold calibration, confidence scoring, and comprehensive error analysis.</Typography>
+        </>
       ],
       image: nusfintech,
       link: 'https://fintechsociety.comp.nus.edu.sg/'
@@ -115,7 +134,11 @@ const Extracurriculars = () => {
               <Typography variant="subtitle1">{extracurricular.role}</Typography>
               <Typography variant="body2">{extracurricular.period}</Typography>
               {extracurricular.details && extracurricular.details.map((detail, idx) => (
-                <Typography key={idx} variant="body2">▪ {detail}</Typography>
+                typeof detail === 'string' ? (
+                  <Typography key={idx} variant="body2">▪ {detail}</Typography>
+                ) : (
+                  <React.Fragment key={idx}>{detail}</React.Fragment>
+                )
               ))}
             </Grid>
           </Grid>
