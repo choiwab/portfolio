@@ -23,7 +23,7 @@ const Extracurriculars = () => {
             • Leading a team to develop a multi-agent AI platform automating equity research using LLMs, LangChain, Langraph, and financial APIs; overseeing architecture, agent orchestration with real-time news scraping, sentiment analysis, and sector insights.
           </Typography>
           <Typography variant="body2">
-            • Utilized Docker, MongoDB, Airflow for ETL pipeline
+            • Utilized Docker, MongoDB, Airflow for ETL pipeline, extracting data from FinnHub API
           </Typography>
         </>,
         <>
