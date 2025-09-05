@@ -20,7 +20,8 @@ const Extracurriculars = () => {
             📅 Aug 2025 - Present
           </Typography>
           <Typography variant="body2">
-            • Leading a team to develop a multi-agent AI platform automating equity research using LLMs, LangChain, and financial APIs; overseeing architecture, agent orchestration with real-time news scraping, sentiment analysis, and sector insights.
+            • Leading a team to develop a multi-agent AI platform automating equity research using LLMs, LangChain, Langraph, and financial APIs; overseeing architecture, agent orchestration with real-time news scraping, sentiment analysis, and sector insights.
+            • Utilized Docker, MongoDB, Airflow for ETL pipeline
           </Typography>
         </>,
         <>
