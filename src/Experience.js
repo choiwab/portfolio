@@ -21,7 +21,7 @@ const Experience = () => {
           onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}
           onMouseOut={(e) => e.currentTarget.style.textDecoration = 'none'}
         >
-          CONTINENTAL
+          CONTINENTAL AG
         </a>
       ),
       title: 'Software Developer Intern',

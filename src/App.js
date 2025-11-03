@@ -56,45 +56,47 @@ const App = () => {
 
   return (
     <Router>
-      <div className="main-content">
-        <AppBar position="static" sx={{ backgroundColor: '#333' }}>
-          <Toolbar sx={{ justifyContent: 'space-between' }}>
-            <IconButton
-              color="inherit"
-              aria-label="menu"
-              onClick={toggleDrawer(true)}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Drawer
-              anchor="left"
-              open={drawerOpen}
-              onClose={toggleDrawer(false)}
-            >
-              {list()}
-            </Drawer>
-            <div>
-              <IconButton color="inherit" href="https://github.com/choiwab" target="_blank" rel="noopener">
-                <GitHubIcon />
+      <div className="app-wrapper">
+        <div className="main-content">
+          <AppBar position="static" sx={{ backgroundColor: '#333' }}>
+            <Toolbar sx={{ justifyContent: 'space-between' }}>
+              <IconButton
+                color="inherit"
+                aria-label="menu"
+                onClick={toggleDrawer(true)}
+              >
+                <MenuIcon />
               </IconButton>
-              <IconButton color="inherit" href="https://www.linkedin.com/in/choiwab/" target="_blank" rel="noopener">
-                <LinkedInIcon />
-              </IconButton>
-              <IconButton color="inherit" href="mailto:j.choi@u.nus.edu">
-                <EmailIcon />
-              </IconButton>
-            </div>
-          </Toolbar>
-        </AppBar>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/education" element={<Education />} />
-          <Route path="/extracurriculars" element={<Extracurriculars />} />
-        </Routes>
+              <Drawer
+                anchor="left"
+                open={drawerOpen}
+                onClose={toggleDrawer(false)}
+              >
+                {list()}
+              </Drawer>
+              <div>
+                <IconButton color="inherit" href="https://github.com/choiwab" target="_blank" rel="noopener">
+                  <GitHubIcon />
+                </IconButton>
+                <IconButton color="inherit" href="https://www.linkedin.com/in/choiwab/" target="_blank" rel="noopener">
+                  <LinkedInIcon />
+                </IconButton>
+                <IconButton color="inherit" href="mailto:j.choi@u.nus.edu">
+                  <EmailIcon />
+                </IconButton>
+              </div>
+            </Toolbar>
+          </AppBar>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/education" element={<Education />} />
+            <Route path="/extracurriculars" element={<Extracurriculars />} />
+          </Routes>
+        </div>
+        <Footer /> {/* Add the Footer component here */}
       </div>
-      <Footer /> {/* Add the Footer component here */}
     </Router>
   );
 };
