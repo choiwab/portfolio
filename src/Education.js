@@ -23,13 +23,6 @@ const Education = () => {
       logo: sghs,
       details: [
         'SAT 1550/1600',
-        'AP Calculus BC 5',
-        'AP Statistics 5',
-        'AP World History 5',
-        'AP Psychology 5',
-        'AP Microeconomics 5',
-        'AP Macroeconomics 5',
-        'TOEFL 119/120'
       ]
     }
   ];

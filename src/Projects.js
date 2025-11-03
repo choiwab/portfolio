@@ -23,9 +23,20 @@ import ewbody from './public/eatwise/Eatwisebody.jpg';
 import ewfood from './public/eatwise/Eatwisefood.jpg';
 import ewcom from './public/eatwise/Eatwisecom.jpg';
 import ewchart from './public/eatwise/Eatwisechart.jpg';
+import agenticfinLogo from './public/agenticfin/ai-in-finance-icon-vector.jpg';
+import agenticfin from './public/agenticfin/agentic-equity-research.png';
 
 const Projects = () => {
   const projects = [
+    {
+      title: 'Agentic Investment Research Analyst',
+      description: 'Agentic Investment Research Analyst is an AI-powered multi-agent system designed to automate the end-to-end equity research process, collecting real-time financial news, extracting key metrics and sentiment, and compiling actionable, sector-specific investment reports and trade ideas.',
+      link: 'https://agentic-investment-research-analyst.vercel.app/',
+      repoLink: 'https://github.com/choiwab/agentic-investment-research-analyst',
+      logo: agenticfinLogo,
+      images: [agenticfin],
+      languages: ['Langgraph', 'Langchain', 'React', 'MongoDB', 'Airflow', 'FinnHub API', 'FastAPI']
+    },
     {
       title: 'Eatwise',
       description: 'My friend Javier Tan and I developed Eatwise, a diet tracking web app. We used React, CSS, and Next.js to build a dynamic frontend, while Firebase and Node.js powered the backend. We deployed Eatwise on Vercel.\nWe integrated the FatSecret Platform REST API to provide accurate food data. We also added features like body type assessments, personalized calorie and nutrition goals, and historical data visualization. Thorough unit, manual, and integration testing ensured the app\'s reliability.',
