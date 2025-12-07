@@ -6,10 +6,21 @@ import hackad from './public/hackad.jpg';
 import roka from './public/roka.jpg';
 import mma from './public/nusmma.jpg';
 import aiClub from './public/aiclub.jpg';
-import nusfintech from './public/Nusfintech.jpg'
+import nusfintech from './public/Nusfintech.jpg';
+import singhacks from './public/singhacks.png';
 
 const Extracurriculars = () => {
   const extracurriculars = [
+    {
+      activity: 'Singhacks 2025 | Singapore',
+      role: '1st Place',
+      period: 'October - November 2025',
+      details: [
+        'Built a decentralized multi-agent research platform on Hedera Hashgraph, securing first place among 200+ participants at Singhacks 2025 and showcasing the solution to 100+ industry leaders at Singapore Fintech Festival 2025'
+      ],
+      image: singhacks,
+      link: 'https://singhacks.com/'
+    },
     {
       activity: 'NUS Fintech Society | Singapore',
       role: 'Tech Lead',
