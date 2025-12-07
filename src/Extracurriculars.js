@@ -16,12 +16,14 @@ const Extracurriculars = () => {
       role: '1st Place',
       period: 'October - November 2025',
       details: [
-        <>
-          Built a decentralized multi-agent research platform on Hedera Hashgraph, securing first place among 200+ participants at Singhacks 2025 and showcasing the solution to industry leaders at{' '} 2025
+        'Built a blockchain-based decentralized multi-agent research platform, securing first place among 200+ participants at Singhacks 2025',
+        <Typography variant="body2">
+          ▪ Presented the solution to 100+ industry leaders at{' '}
           <Link href="https://www.fintechfestival.sg/" target="_blank" rel="noopener noreferrer" sx={{ color: '#61dafb', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>
             Singapore Fintech Festival
           </Link>
-        </>
+          {' '}2025
+        </Typography>
       ],
       image: singhacks,
       link: 'https://singhacks.com/'
