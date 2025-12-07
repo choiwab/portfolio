@@ -25,14 +25,35 @@ import ewcom from './public/eatwise/Eatwisecom.jpg';
 import ewchart from './public/eatwise/Eatwisechart.jpg';
 import agenticfinLogo from './public/agenticfin/ai-in-finance-icon-vector.jpg';
 import agenticfin from './public/agenticfin/agentic-equity-research.png';
+import synapticaLogo from './public/synaptica-logo.png';
+import synaptica1 from './public/Synaptica1.png';
+import synaptica2 from './public/Synaptica2.png';
+import synaptica3 from './public/Synaptia3.png';
 
 const Projects = () => {
   const projects = [
+    {
+      title: 'Synaptica',
+      description: 'A multi-agent marketplace built on Hedera Hashgraph for orchestrating research tasks across specialized AI agents with autonomous negotiation, execution, and payment.',
+      link: 'https://synaptica-ai.vercel.app/',
+      repoLink: 'https://github.com/ProvidAI/SynapticaWeb',
+      videoLink: 'https://www.youtube.com/watch?v=yMustp3eNXw',
+      pitchDeckLink: 'https://drive.google.com/file/d/1M6NUxfYQf7GqnETLo9S6jWGW2O60yNze/view?usp=sharing',
+      logo: synapticaLogo,
+      images: [synaptica1, synaptica2, synaptica3],
+      languages: ['Python', 'Node.js', 'React', 'PostgreSQL', 'SQLite', 'OpenAI API'],
+      protocols: ['ERC-8004: Agent Discovery', 'x402: Payment Protocol'],
+      descriptionLinks: {
+        Hedera: 'https://hedera.com/',
+        Hashgraph: 'https://www.hashgraph.com/'
+      }
+    },
     {
       title: 'Agentic Investment Research Analyst',
       description: 'Agentic Investment Research Analyst is an AI-powered multi-agent system designed to automate the end-to-end equity research process, collecting real-time financial news, extracting key metrics and sentiment, and compiling actionable, sector-specific investment reports and trade ideas.',
       link: 'https://agentic-investment-research-analyst.vercel.app/',
       repoLink: 'https://github.com/choiwab/agentic-investment-research-analyst',
+      videoLink: 'https://www.youtube.com/watch?v=EiD2VaJAxtw',
       logo: agenticfinLogo,
       images: [agenticfin],
       languages: ['Langgraph', 'Langchain', 'React', 'MongoDB', 'Airflow', 'FinnHub API', 'FastAPI']
@@ -42,7 +63,7 @@ const Projects = () => {
       description: 'My friend Javier Tan and I developed Eatwise, a diet tracking web app. We used React, CSS, and Next.js to build a dynamic frontend, while Firebase and Node.js powered the backend. We deployed Eatwise on Vercel.\nWe integrated the FatSecret Platform REST API to provide accurate food data. We also added features like body type assessments, personalized calorie and nutrition goals, and historical data visualization. Thorough unit, manual, and integration testing ensured the app\'s reliability.',
       link: 'https://eatwise.vercel.app/protected/Home',
       repoLink: 'https://github.com/Incogdino/EatWise', // Add GitHub repo link
-      readmeLink: 'https://docs.google.com/document/d/1jGK9rGxmfrxFYeRkWvg3JMLQygjcFFpXhwCW8a1Kddg/edit', 
+      readmeLink: 'https://docs.google.com/document/d/1jGK9rGxmfrxFYeRkWvg3JMLQygjcFFpXhwCW8a1Kddg/edit',
       logo: eatwise,
       images: [ewmain, ewfood, ewbody, ewcom, ewchart], // replace with your project images
       languages: ['React', 'CSS', 'Next.js', 'Firebase', 'Node.js']
@@ -54,7 +75,7 @@ const Projects = () => {
       repoLink: 'https://github.com/choiwab/Easy_Read', // Add GitHub repo link
       readmeLink: 'https://docs.google.com/document/d/1gGGssixoUiZYSGmtBh4g9TQB3A6xMpVU2vPgZ1XFwes/edit?usp=sharing', // Add README file link
       logo: easyread,
-      images: [erhome, input, paste, image, pdf], 
+      images: [erhome, input, paste, image, pdf],
       languages: ['Python', 'Streamlit', 'LangChain', 'GPT API']
     },
     {
@@ -63,7 +84,7 @@ const Projects = () => {
       //link: 'http://link-to-octagon-frenzy.com',
       repoLink: 'https://github.com/choiwab/Octagon-Frenzy', // Add GitHub repo link
       logo: ufc,
-      images: [main, character, gameplay, stage, leaderboard], 
+      images: [main, character, gameplay, stage, leaderboard],
       languages: ['Python', 'Processing']
     },
   ];
@@ -114,7 +135,15 @@ const Projects = () => {
               </Grid>
               <Grid item xs={9}>
                 <Typography variant="h6">{projects[selectedProject].title}</Typography>
-                <Typography variant="body1" sx={{ whiteSpace: 'pre-line' }}>{projects[selectedProject].description}</Typography>
+                <Typography variant="body1" sx={{ whiteSpace: 'pre-line' }}>
+                  {projects[selectedProject].descriptionLinks ? (
+                    <>
+                      A multi-agent marketplace built on <Link href={projects[selectedProject].descriptionLinks.Hedera} target="_blank" rel="noopener" sx={{ color: '#61dafb' }}>Hedera</Link> <Link href={projects[selectedProject].descriptionLinks.Hashgraph} target="_blank" rel="noopener" sx={{ color: '#61dafb' }}>Hashgraph</Link> for orchestrating research tasks across specialized AI agents with autonomous negotiation, execution, and payment.
+                    </>
+                  ) : (
+                    projects[selectedProject].description
+                  )}
+                </Typography>
                 <Link href={projects[selectedProject].link} target="_blank" rel="noopener" sx={{ color: '#61dafb', display: 'block' }}>
                   Visit Project
                 </Link>
@@ -126,9 +155,24 @@ const Projects = () => {
                     Project Report
                   </Link>
                 )}
+                {projects[selectedProject].videoLink && (
+                  <Link href={projects[selectedProject].videoLink} target="_blank" rel="noopener" sx={{ color: '#61dafb', display: 'block' }}>
+                    Video Demo
+                  </Link>
+                )}
+                {projects[selectedProject].pitchDeckLink && (
+                  <Link href={projects[selectedProject].pitchDeckLink} target="_blank" rel="noopener" sx={{ color: '#61dafb', display: 'block' }}>
+                    Pitch Deck
+                  </Link>
+                )}
                 <Typography variant="body2" sx={{ marginTop: 1 }}>
                   <strong>Programming Languages & Tools:</strong> {projects[selectedProject].languages.join(', ')}
                 </Typography>
+                {projects[selectedProject].protocols && (
+                  <Typography variant="body2" sx={{ marginTop: 1 }}>
+                    <strong>Protocols:</strong> {projects[selectedProject].protocols.join(', ')}
+                  </Typography>
+                )}
               </Grid>
               <Grid item xs={12}>
                 <Swiper
