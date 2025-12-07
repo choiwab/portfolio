@@ -16,7 +16,7 @@ const Extracurriculars = () => {
       role: '1st Place',
       period: 'October - November 2025',
       details: [
-        'Built a decentralized multi-agent research platform on Hedera Hashgraph, securing first place among 200+ participants at Singhacks 2025 and showcasing the solution to 100+ industry leaders at Singapore Fintech Festival 2025'
+        'Built a decentralized multi-agent research platform on Hedera Hashgraph, securing first place among 200+ participants at Singhacks 2025 and showcasing the solution to industry leaders at Singapore Fintech Festival 2025'
       ],
       image: singhacks,
       link: 'https://singhacks.com/'
