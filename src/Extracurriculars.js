@@ -1,13 +1,13 @@
 import React from 'react';
 import { Container, Typography, Grid, Paper, Link } from '@mui/material';
 import GroupIcon from '@mui/icons-material/Group';
-import optiver from './public/optiver.jpg';
-import hackad from './public/hackad.jpg';
-import roka from './public/roka.jpg';
-import mma from './public/nusmma.jpg';
-import aiClub from './public/aiclub.jpg';
-import nusfintech from './public/Nusfintech.jpg';
-import singhacks from './public/singhacks.png';
+import optiver from './public/extracurriculars/optiver.jpg';
+import hackad from './public/extracurriculars/hackad.jpg';
+import roka from './public/extracurriculars/roka.jpg';
+import mma from './public/extracurriculars/nusmma.jpg';
+import aiClub from './public/extracurriculars/aiclub.jpg';
+import nusfintech from './public/extracurriculars/Nusfintech.jpg';
+import singhacks from './public/singhacks/singhacks.png';
 
 const Extracurriculars = () => {
   const extracurriculars = [

@@ -5,9 +5,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import eatwise from './public/Eatwise.jpg';
-import easyread from './public/easyread.jpg';
-import ufc from './public/ufc.jpg';
+import eatwise from './public/project logos/Eatwise.jpg';
+import easyread from './public/project logos/easyread.jpg';
+import ufc from './public/project logos/ufc.jpg';
 import character from './public/ufc/character.jpg';
 import gameplay from './public/ufc/gameplay.jpg';
 import leaderboard from './public/ufc/leaderboard.jpg';
@@ -25,10 +25,10 @@ import ewcom from './public/eatwise/Eatwisecom.jpg';
 import ewchart from './public/eatwise/Eatwisechart.jpg';
 import agenticfinLogo from './public/agenticfin/ai-in-finance-icon-vector.jpg';
 import agenticfin from './public/agenticfin/agentic-equity-research.png';
-import synapticaLogo from './public/synaptica-logo.png';
-import synaptica1 from './public/Synaptica1.png';
-import synaptica2 from './public/Synaptica2.png';
-import synaptica3 from './public/Synaptia3.png';
+import synapticaLogo from './public/synaptica/synaptica-logo.png';
+import synaptica1 from './public/synaptica/Synaptica1.png';
+import synaptica2 from './public/synaptica/Synaptica2.png';
+import synaptica3 from './public/synaptica/Synaptia3.png';
 
 const Projects = () => {
   const projects = [

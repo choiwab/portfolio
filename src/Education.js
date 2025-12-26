@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Typography, Grid, Paper } from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School';
-import nus from './public/nus.jpg'
-import sghs from './public/sghs.jpg'
-import nyuad from './public/nyuad.jpg'
+import nus from './public/education/nus.jpg'
+import sghs from './public/education/sghs.jpg'
+import nyuad from './public/education/nyuad.jpg'
 
 const Education = () => {
   const education = [

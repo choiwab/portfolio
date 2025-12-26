@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container, Typography, Grid, Paper } from '@mui/material';
 import WorkIcon from '@mui/icons-material/Work';
-import telenorpic from './public/telenor.jpg';
-import paulacademy from './public/paulacademy.jpg';
-import bondit from './public/bondit.jpg';
-import continental from './public/continental.jpg';
+import telenorpic from './public/company-logos/telenor.jpg';
+import paulacademy from './public/company-logos/paulacademy.jpg';
+import bondit from './public/company-logos/bondit.jpg';
+import continental from './public/company-logos/continental.jpg';
 
 const Experience = () => {
   const experiences = [

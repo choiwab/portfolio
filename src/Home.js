@@ -3,8 +3,8 @@ import { Container, Typography, Avatar, IconButton, Box } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Element, Link } from 'react-scroll';
-import ProfilePic from './public/Jaehyeok-Choi Profile Photo.jpg'; // replace with your profile picture path
-import bjjpic from './public/bjj.jpg';
+import ProfilePic from './public/home/Jaehyeok-Choi Profile Photo.jpg'; // replace with your profile picture path
+import bjjpic from './public/home/bjj.jpg';
 import './App.css'; // Import the CSS file
 import MapComponent from './MapComponent';
 
