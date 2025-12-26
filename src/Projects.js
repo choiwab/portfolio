@@ -29,6 +29,8 @@ import synapticaLogo from './public/synaptica/synaptica-logo.png';
 import synaptica1 from './public/synaptica/Synaptica1.png';
 import synaptica2 from './public/synaptica/Synaptica2.png';
 import synaptica3 from './public/synaptica/Synaptia3.png';
+import pmvLogo from './public/polymarket-visualiser/pmv-logo.png';
+import pmv1 from './public/polymarket-visualiser/pmv-1.png';
 
 const Projects = () => {
   const projects = [
@@ -57,6 +59,15 @@ const Projects = () => {
       logo: agenticfinLogo,
       images: [agenticfin],
       languages: ['Langgraph', 'Langchain', 'React', 'MongoDB', 'Airflow', 'FinnHub API', 'FastAPI']
+    },
+    {
+      title: 'Polymarket Visualiser (In Progress)',
+      description: 'A real-time visualizer for Polymarket prediction markets. This project provides an interactive treemap visualization of market data, enabling users to explore and analyze prediction market trends with live updates.',
+      link: 'https://poly-viz.vercel.app/',
+      repoLink: 'https://github.com/choiwab/polymarket-visual',
+      logo: pmvLogo,
+      images: [pmv1],
+      languages: ['Next.js', 'TypeScript', 'D3.js', 'SWR', 'Tailwind CSS', 'Lucide React']
     },
     {
       title: 'Eatwise',
