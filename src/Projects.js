@@ -31,9 +31,21 @@ import synaptica2 from './public/synaptica/Synaptica2.png';
 import synaptica3 from './public/synaptica/Synaptia3.png';
 import pmvLogo from './public/polymarket-visualiser/pmv-logo.png';
 import pmv1 from './public/polymarket-visualiser/pmv-1.png';
+import leet99Logo from './public/leet99/icon.png';
+import leet99Screenshot from './public/leet99/leet99.png';
 
 const Projects = () => {
   const projects = [
+    {
+      title: 'Leet 99',
+      description: 'A fast-paced real-time battle royale where 2-99 players race to solve bite-sized coding problems. Players compete to solve problems while deploying debuffs like Vim Lock, Flashbang, or DDOS attacks on opponents. Last coder standing wins! Inspired by Tetris 99, this project turns the solitary LeetCode grind into a multiplayer showdown.',
+      link: 'https://leetcode-99-web-9ed8.vercel.app/',
+      repoLink: 'https://github.com/Tien-Cheng/leetcode-99',
+      devpostLink: 'https://devpost.com/software/leet-99',
+      logo: leet99Logo,
+      images: [leet99Screenshot],
+      languages: ['Next.js', 'Tailwind CSS', 'daisyUI', 'Monaco Editor', 'PartyKit', 'Judge0 CE', 'Supabase', 'Python']
+    },
     {
       title: 'Synaptica',
       description: 'A multi-agent marketplace built on Hedera Hashgraph for orchestrating research tasks across specialized AI agents with autonomous negotiation, execution, and payment.',
@@ -174,6 +186,11 @@ const Projects = () => {
                 {projects[selectedProject].pitchDeckLink && (
                   <Link href={projects[selectedProject].pitchDeckLink} target="_blank" rel="noopener" sx={{ color: '#61dafb', display: 'block' }}>
                     Pitch Deck
+                  </Link>
+                )}
+                {projects[selectedProject].devpostLink && (
+                  <Link href={projects[selectedProject].devpostLink} target="_blank" rel="noopener" sx={{ color: '#61dafb', display: 'block' }}>
+                    Devpost
                   </Link>
                 )}
                 <Typography variant="body2" sx={{ marginTop: 1 }}>
