@@ -1,10 +1,16 @@
 import React from 'react';
-import { Container, Typography, Grid, Paper } from '@mui/material';
+import { Container, Typography, Grid, Paper, Box } from '@mui/material';
 import WorkIcon from '@mui/icons-material/Work';
 import telenorpic from './public/company-logos/telenor.jpg';
 import paulacademy from './public/company-logos/paulacademy.jpg';
 import bondit from './public/company-logos/bondit.jpg';
 import continental from './public/company-logos/continental.jpg';
+
+const linkStyle = {
+  color: '#818cf8',
+  textDecoration: 'none',
+  transition: 'color 0.2s ease',
+};
 
 const Experience = () => {
   const experiences = [
@@ -14,12 +20,9 @@ const Experience = () => {
           href="https://www.continental.com/en/"
           target="_blank"
           rel="noopener noreferrer"
-          style={{
-            color: '#61dafb',
-            textDecoration: 'none',
-          }}
-          onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}
-          onMouseOut={(e) => e.currentTarget.style.textDecoration = 'none'}
+          style={linkStyle}
+          onMouseOver={(e) => e.currentTarget.style.color = '#a5b4fc'}
+          onMouseOut={(e) => e.currentTarget.style.color = '#818cf8'}
         >
           CONTINENTAL AG
         </a>
@@ -42,12 +45,9 @@ const Experience = () => {
           href="https://www.telenor.com/"
           target="_blank"
           rel="noopener noreferrer"
-          style={{
-            color: '#61dafb', // Change this to your desired color
-            textDecoration: 'none',
-          }}
-          onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}
-          onMouseOut={(e) => e.currentTarget.style.textDecoration = 'none'}
+          style={linkStyle}
+          onMouseOver={(e) => e.currentTarget.style.color = '#a5b4fc'}
+          onMouseOut={(e) => e.currentTarget.style.color = '#818cf8'}
         >
           TELENOR
         </a>
@@ -69,12 +69,9 @@ const Experience = () => {
           href="https://paulacademy.net/"
           target="_blank"
           rel="noopener noreferrer"
-          style={{
-            color: '#61dafb', // Change this to your desired color
-            textDecoration: 'none',
-          }}
-          onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}
-          onMouseOut={(e) => e.currentTarget.style.textDecoration = 'none'}
+          style={linkStyle}
+          onMouseOver={(e) => e.currentTarget.style.color = '#a5b4fc'}
+          onMouseOut={(e) => e.currentTarget.style.color = '#818cf8'}
         >
           PAUL ACADEMY
         </a>
@@ -96,12 +93,9 @@ const Experience = () => {
           href="https://www.bondit.io/"
           target="_blank"
           rel="noopener noreferrer"
-          style={{
-            color: '#61dafb', // Change this to your desired color
-            textDecoration: 'none',
-          }}
-          onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}
-          onMouseOut={(e) => e.currentTarget.style.textDecoration = 'none'}
+          style={linkStyle}
+          onMouseOver={(e) => e.currentTarget.style.color = '#a5b4fc'}
+          onMouseOut={(e) => e.currentTarget.style.color = '#818cf8'}
         >
           BONDIT
         </a>
@@ -124,26 +118,48 @@ const Experience = () => {
     <Container sx={{ marginTop: 4 }}>
       <Grid container justifyContent="center">
         <Grid item>
-          <Typography variant="h4" sx={{ display: 'flex', alignItems: 'center', marginBottom: 4 }}>
-            <WorkIcon sx={{ marginRight: 1 }} />
+          <Typography variant="h4" sx={{ display: 'flex', alignItems: 'center', marginBottom: 4, fontWeight: 600, letterSpacing: '-0.02em' }}>
+            <WorkIcon sx={{ marginRight: 1, color: '#818cf8' }} />
             My Work Experiences
           </Typography>
         </Grid>
       </Grid>
       {experiences.map((exp, index) => (
-        <Paper key={index} elevation={3} sx={{ padding: 2, marginBottom: 2, backgroundColor: '#1c1c1c', color: '#fff' }}>
-          <Grid container spacing={2}>
+        <Paper key={index} elevation={0} sx={{
+          padding: 3,
+          marginBottom: 3,
+          backgroundColor: '#141414',
+          color: '#f5f5f5',
+          border: '1px solid rgba(255,255,255,0.08)',
+          borderRadius: '12px',
+          transition: 'border-color 0.2s ease',
+          '&:hover': { borderColor: 'rgba(255,255,255,0.16)' },
+        }}>
+          <Grid container spacing={3}>
             <Grid item xs={3}>
-              <img src={exp.logo} alt={exp.company} style={{ width: '100%', borderRadius: '8px' }} />
+              <img src={exp.logo} alt={exp.company} style={{ width: '100%', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.08)' }} />
             </Grid>
             <Grid item xs={9}>
-              <Typography variant="h6">{exp.title}</Typography>
-              <Typography variant="subtitle1">{exp.company}</Typography>
-              <Typography variant="subtitle2">{exp.period}</Typography>
-              <Typography variant="body1">{exp.description}</Typography>
-              <Typography variant="body2" sx={{ marginTop: 1 }}>
-                <strong>Programming Languages & Tools:</strong> {exp.languages.join(', ')}
-              </Typography>
+              <Typography variant="h6" sx={{ fontWeight: 600 }}>{exp.title}</Typography>
+              <Typography variant="subtitle1" sx={{ color: 'rgba(255,255,255,0.7)' }}>{exp.company}</Typography>
+              <Typography variant="subtitle2" sx={{ color: 'rgba(255,255,255,0.4)', fontWeight: 400 }}>{exp.period}</Typography>
+              <Typography variant="body1" component="div" sx={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>{exp.description}</Typography>
+              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.75, mt: 1.5 }}>
+                {exp.languages.map((lang, i) => (
+                  <Typography key={i} variant="caption" sx={{
+                    px: 1.5,
+                    py: 0.5,
+                    borderRadius: '6px',
+                    backgroundColor: 'rgba(129,140,248,0.1)',
+                    color: '#818cf8',
+                    fontSize: '0.75rem',
+                    fontWeight: 500,
+                    border: '1px solid rgba(129,140,248,0.2)',
+                  }}>
+                    {lang}
+                  </Typography>
+                ))}
+              </Box>
             </Grid>
           </Grid>
         </Paper>

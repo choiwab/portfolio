@@ -19,7 +19,7 @@
 }
 
 .App-link {
-  color: #666666;
+  color: #818cf8;
 }
 
 @keyframes App-logo-spin {
@@ -87,10 +87,11 @@ body {
 
 .footer {
   flex-shrink: 0;
-  background-color: #333;
-  color: #fff;
+  background-color: #0a0a0a;
+  color: rgba(255,255,255,0.7);
   padding: 20px;
   text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 /* Apply scroll snap only to the home page */

@@ -23,10 +23,10 @@ const cities = [
 ];
 
 const MapComponent = () => {
-  const center = [37.5665, 126.9780]; // Coordinates to center the map (example: Seoul)
-  const zoom = 2; // Zoom level to show multiple pinpoints
+  const center = [37.5665, 126.9780];
+  const zoom = 2;
   return (
-    <MapContainer center={center} zoom={zoom} style={{ height: '400px', width: '100%' }} worldCopyJump={true} >
+    <MapContainer center={center} zoom={zoom} style={{ height: '400px', width: '100%', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.08)', overflow: 'hidden' }} worldCopyJump={true} >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
