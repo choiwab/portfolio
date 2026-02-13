@@ -9,6 +9,18 @@ import aiClub from './public/extracurriculars/aiclub.jpg';
 import nusfintech from './public/extracurriculars/Nusfintech.jpg';
 import singhacks from './public/singhacks/singhacks.png';
 
+const accentLink = { color: '#818cf8', textDecoration: 'none', '&:hover': { color: '#a5b4fc', textDecoration: 'none' } };
+const timelineHeader = {
+  fontWeight: 600,
+  color: '#818cf8',
+  borderBottom: '1px solid rgba(129,140,248,0.3)',
+  paddingBottom: '4px',
+  marginTop: '12px',
+  marginBottom: '6px',
+  fontSize: '0.8rem',
+  letterSpacing: '0.02em',
+};
+
 const Extracurriculars = () => {
   const extracurriculars = [
     {
@@ -17,9 +29,9 @@ const Extracurriculars = () => {
       period: 'October - November 2025',
       details: [
         'Built a blockchain-based decentralized multi-agent research platform, securing first place among 200+ participants at Singhacks 2025',
-        <Typography variant="body2">
+        <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.6)' }}>
           ▪ Presented the solution to 100+ industry leaders at{' '}
-          <Link href="https://www.fintechfestival.sg/" target="_blank" rel="noopener noreferrer" sx={{ color: '#61dafb', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>
+          <Link href="https://www.fintechfestival.sg/" target="_blank" rel="noopener noreferrer" sx={accentLink}>
             Singapore Fintech Festival
           </Link>
           {' '}2025
@@ -34,38 +46,38 @@ const Extracurriculars = () => {
       period: 'August 2024 - Present',
       details: [
         <>
-          <Typography variant="subtitle2" sx={{ fontWeight: 'bold', color: '#61dafb', borderBottom: '1px solid #61dafb', paddingBottom: '4px', marginTop: '8px', marginBottom: '4px' }}>
+          <Typography variant="subtitle2" sx={timelineHeader}>
             📅 Aug 2025 - Present
           </Typography>
-          <Typography variant="body2">
+          <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.6)' }}>
             • Leading a team to develop a multi-agent AI platform automating equity research using LLMs, LangChain, Langraph, and financial APIs; overseeing architecture, agent orchestration with real-time news scraping, sentiment analysis, and sector insights.
           </Typography>
-          <Typography variant="body2">
+          <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.6)' }}>
             • Utilized Docker, MongoDB, Airflow for ETL pipeline, extracting data from FinnHub API
           </Typography>
         </>,
         <>
-          <Typography variant="subtitle2" sx={{ fontWeight: 'bold', color: '#61dafb', borderBottom: '1px solid #61dafb', paddingBottom: '4px', marginTop: '8px', marginBottom: '4px' }}>
+          <Typography variant="subtitle2" sx={timelineHeader}>
             📅 Jan 2025 - May 2025
           </Typography>
-          <Typography variant="body2">• Developed a stock price prediction model using time series analysis on candlestick patterns and technical indicators, leveraging pattern recognition to enhance forecasting accuracy.</Typography>
-          <Typography variant="body2">• Paramters used: candlestick patterns (Doji, Hammer, Shooting Star) and technical indicators (RSI, MACD, ATR, OBV).</Typography>
-          <Typography variant="body2"> • Models used: Implemented Logistic Regression, Random Forest, XGBoost, LSTM, and Temporal Fusion Transformer (TFT) to enhance forecasting accuracy, leveraging feature engineering and hyperparameter tuning for optimized performance.</Typography>
+          <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.6)' }}>• Developed a stock price prediction model using time series analysis on candlestick patterns and technical indicators, leveraging pattern recognition to enhance forecasting accuracy.</Typography>
+          <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.6)' }}>• Paramters used: candlestick patterns (Doji, Hammer, Shooting Star) and technical indicators (RSI, MACD, ATR, OBV).</Typography>
+          <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.6)' }}> • Models used: Implemented Logistic Regression, Random Forest, XGBoost, LSTM, and Temporal Fusion Transformer (TFT) to enhance forecasting accuracy, leveraging feature engineering and hyperparameter tuning for optimized performance.</Typography>
         </>,
         <>
-          <Typography variant="subtitle2" sx={{ fontWeight: 'bold', color: '#61dafb', borderBottom: '1px solid #61dafb', paddingBottom: '4px', marginTop: '8px', marginBottom: '4px' }}>
+          <Typography variant="subtitle2" sx={timelineHeader}>
             📅 Aug 2024 - Dec 2024
           </Typography>
-          <Typography variant="body2" sx={{ marginBottom: '4px' }}>
+          <Typography variant="body2" sx={{ marginBottom: '4px', color: 'rgba(255,255,255,0.6)' }}>
             • Worked for machine learning team of{' '}
-            <Link href="https://lenorai.com/" target="_blank" rel="noopener noreferrer" sx={{ color: '#61dafb', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>
+            <Link href="https://lenorai.com/" target="_blank" rel="noopener noreferrer" sx={accentLink}>
               Lenor
             </Link>{' '}
             (Financial Literacy Tutor Startup)
           </Typography>
-          <Typography variant="body2">• Designed a structured workflow for data generation and evaluation leveraging LLMs, focusing on scalability and accuracy.</Typography>
-          <Typography variant="body2">• Performed data generation and exploratory data analysis using open-source LLMs like Llama-3, employing a dual-model filtering technique (e.g. Llama and Gemini) for cross-validation and consistency checks to ensure data quality and reliability.</Typography>
-          <Typography variant="body2">• Developed a zero-shot classification pipeline utilizing the facebook/bart-large-mnli model to predict and assign relevance scores for each conversation dataset, optimizing performance through threshold calibration, confidence scoring, and comprehensive error analysis.</Typography>
+          <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.6)' }}>• Designed a structured workflow for data generation and evaluation leveraging LLMs, focusing on scalability and accuracy.</Typography>
+          <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.6)' }}>• Performed data generation and exploratory data analysis using open-source LLMs like Llama-3, employing a dual-model filtering technique (e.g. Llama and Gemini) for cross-validation and consistency checks to ensure data quality and reliability.</Typography>
+          <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.6)' }}>• Developed a zero-shot classification pipeline utilizing the facebook/bart-large-mnli model to predict and assign relevance scores for each conversation dataset, optimizing performance through threshold calibration, confidence scoring, and comprehensive error analysis.</Typography>
         </>
       ],
       image: nusfintech,
@@ -136,27 +148,36 @@ const Extracurriculars = () => {
 
   return (
     <Container sx={{ marginTop: 4 }}>
-      <Typography variant="h4" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 4 }}>
-        <GroupIcon sx={{ marginRight: 1 }} />
+      <Typography variant="h4" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 4, fontWeight: 600, letterSpacing: '-0.02em' }}>
+        <GroupIcon sx={{ marginRight: 1, color: '#818cf8' }} />
         Extracurriculars
       </Typography>
       {extracurriculars.map((extracurricular, index) => (
-        <Paper key={index} elevation={3} sx={{ padding: 2, marginBottom: 2, backgroundColor: '#1c1c1c', color: '#fff' }}>
-          <Grid container spacing={2}>
+        <Paper key={index} elevation={0} sx={{
+          padding: 3,
+          marginBottom: 3,
+          backgroundColor: '#141414',
+          color: '#f5f5f5',
+          border: '1px solid rgba(255,255,255,0.08)',
+          borderRadius: '12px',
+          transition: 'border-color 0.2s ease',
+          '&:hover': { borderColor: 'rgba(255,255,255,0.16)' },
+        }}>
+          <Grid container spacing={3}>
             <Grid item xs={3}>
-              <img src={extracurricular.image} alt={extracurricular.activity} style={{ width: '100%', borderRadius: '8px' }} />
+              <img src={extracurricular.image} alt={extracurricular.activity} style={{ width: '100%', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.08)' }} />
             </Grid>
             <Grid item xs={9}>
-              <Typography variant="h6">
-                <Link href={extracurricular.link} target="_blank" rel="noopener" sx={{ color: '#61dafb', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>
+              <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                <Link href={extracurricular.link} target="_blank" rel="noopener" sx={accentLink}>
                   {extracurricular.activity}
                 </Link>
               </Typography>
-              <Typography variant="subtitle1">{extracurricular.role}</Typography>
-              <Typography variant="body2">{extracurricular.period}</Typography>
+              <Typography variant="subtitle1" sx={{ color: 'rgba(255,255,255,0.7)' }}>{extracurricular.role}</Typography>
+              <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.4)' }}>{extracurricular.period}</Typography>
               {extracurricular.details && extracurricular.details.map((detail, idx) => (
                 typeof detail === 'string' ? (
-                  <Typography key={idx} variant="body2">▪ {detail}</Typography>
+                  <Typography key={idx} variant="body2" sx={{ color: 'rgba(255,255,255,0.6)' }}>▪ {detail}</Typography>
                 ) : (
                   <React.Fragment key={idx}>{detail}</React.Fragment>
                 )
