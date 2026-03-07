@@ -42,6 +42,13 @@ const accentLinkSx = {
   '&:hover': { color: '#a5b4fc' },
 };
 
+const accentLinkSxInline = {
+  color: '#818cf8',
+  display: 'inline',
+  fontSize: 'inherit',
+  '&:hover': { color: '#a5b4fc' },
+};
+
 const Projects = () => {
   const projects = [
     {
@@ -176,7 +183,7 @@ const Projects = () => {
                 <Typography variant="body1" sx={{ whiteSpace: 'pre-line', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>
                   {projects[selectedProject].descriptionLinks ? (
                     <>
-                      A multi-agent marketplace built on <Link href={projects[selectedProject].descriptionLinks.Hedera} target="_blank" rel="noopener" sx={accentLinkSx}>Hedera</Link> <Link href={projects[selectedProject].descriptionLinks.Hashgraph} target="_blank" rel="noopener" sx={accentLinkSx}>Hashgraph</Link> for orchestrating research tasks across specialized AI agents with autonomous negotiation, execution, and payment.
+                      A multi-agent marketplace built on <Link href={projects[selectedProject].descriptionLinks.Hedera} target="_blank" rel="noopener" sx={accentLinkSxInline}>Hedera</Link> <Link href={projects[selectedProject].descriptionLinks.Hashgraph} target="_blank" rel="noopener" sx={accentLinkSxInline}>Hashgraph</Link> for orchestrating research tasks across specialized AI agents with autonomous negotiation, execution, and payment.
                     </>
                   ) : (
                     projects[selectedProject].description
