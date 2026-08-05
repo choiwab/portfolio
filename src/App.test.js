@@ -1,8 +1,18 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+jest.mock('./MapComponent', () => () => null);
+jest.mock('./Projects', () => () => null);
+
+window.scrollTo = jest.fn();
+
+test('renders the portfolio home page', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /welcome to my page/i })).toBeInTheDocument();
+});
+
+test('renders the Peahi engineering case study', () => {
+  window.history.pushState({}, '', '/blog/building-reliable-ai-underwriting');
+  render(<App />);
+  expect(screen.getByRole('heading', { name: /where ai stops and business rules begin/i })).toBeInTheDocument();
 });

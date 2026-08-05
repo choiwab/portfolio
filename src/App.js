@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Link as RouterLink, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './Home';
 import Experience from './Experience';
 import Projects from './Projects';
 import Education from './Education';
 import Extracurriculars from './Extracurriculars';
+import Blog from './Blog';
+import PeahiBlogPost from './PeahiBlogPost';
 import { AppBar, Toolbar, IconButton, Drawer, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -18,6 +20,18 @@ const iconSx = {
   color: 'rgba(255,255,255,0.5)',
   transition: 'all 0.2s ease',
   '&:hover': { color: '#f5f5f5', backgroundColor: 'rgba(255,255,255,0.06)' },
+};
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, [pathname]);
+
+  return null;
 };
 
 const App = () => {
@@ -36,6 +50,7 @@ const App = () => {
     { label: 'Projects', href: '/projects' },
     { label: 'Education', href: '/education' },
     { label: 'Extracurriculars', href: '/extracurriculars' },
+    { label: 'Blog', href: '/blog' },
   ];
 
   const list = () => (
@@ -54,8 +69,8 @@ const App = () => {
         {navItems.map((item) => (
           <ListItem key={item.label} disablePadding>
             <ListItemButton
-              component="a"
-              href={item.href}
+              component={RouterLink}
+              to={item.href}
               sx={{
                 py: 1.5,
                 px: 3,
@@ -76,6 +91,7 @@ const App = () => {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="app-wrapper">
         <div className="main-content">
           <AppBar position="sticky" elevation={0} sx={{
@@ -105,13 +121,13 @@ const App = () => {
                 {list()}
               </Drawer>
               <div>
-                <IconButton sx={iconSx} href="https://github.com/choiwab" target="_blank" rel="noopener">
+                <IconButton aria-label="GitHub profile" sx={iconSx} href="https://github.com/choiwab" target="_blank" rel="noopener">
                   <GitHubIcon />
                 </IconButton>
-                <IconButton sx={iconSx} href="https://www.linkedin.com/in/choiwab/" target="_blank" rel="noopener">
+                <IconButton aria-label="LinkedIn profile" sx={iconSx} href="https://www.linkedin.com/in/choiwab/" target="_blank" rel="noopener">
                   <LinkedInIcon />
                 </IconButton>
-                <IconButton sx={iconSx} href="mailto:j.choi@u.nus.edu">
+                <IconButton aria-label="Email Jaehyeok" sx={iconSx} href="mailto:j.choi@u.nus.edu">
                   <EmailIcon />
                 </IconButton>
               </div>
@@ -123,6 +139,8 @@ const App = () => {
             <Route path="/projects" element={<Projects />} />
             <Route path="/education" element={<Education />} />
             <Route path="/extracurriculars" element={<Extracurriculars />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/building-reliable-ai-underwriting" element={<PeahiBlogPost />} />
           </Routes>
         </div>
         <Footer />
