@@ -1,101 +1,37 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import peahiWave from './public/blog/peahi-wave.jpg';
+import zurichLogo from './public/blog/zurich-logo.png';
 import './Blog.css';
 
-const PlatformDiagram = () => (
-  <figure className="article-figure" aria-labelledby="platform-diagram-caption">
-    <div className="platform-diagram" role="img" aria-label="Simplified agentic underwriting workflow. An underwriting submission enters an orchestration layer, which coordinates research and quotation services before human review.">
-      <div className="diagram-node diagram-node--external">Underwriting submission</div>
-      <div className="diagram-arrow" aria-hidden="true">→</div>
-      <div className="diagram-node">Orchestration layer</div>
-      <div className="diagram-arrow" aria-hidden="true">→</div>
-      <div className="platform-diagram__services">
-        <div className="diagram-node diagram-node--owned">
-          <span className="diagram-node__label">My focus</span>
-          Financial research
-          <small>Identity + structured data</small>
-        </div>
-        <div className="diagram-node">Other specialist services</div>
-        <div className="diagram-node diagram-node--owned">
-          <span className="diagram-node__label">My focus</span>
-          Quotation generation
-          <small>Rules + documents</small>
-        </div>
-      </div>
-      <div className="diagram-arrow diagram-arrow--vertical" aria-hidden="true">↓</div>
-      <div className="diagram-node diagram-node--human">Underwriter review</div>
+const SimpleArchitecture = () => (
+  <figure className="simple-architecture">
+    <div
+      className="simple-architecture__flow"
+      role="img"
+      aria-label="Simplified workflow from an underwriting submission, through orchestration and specialist services, to underwriter review"
+    >
+      <span>Submission</span>
+      <b aria-hidden="true">→</b>
+      <span>Orchestration</span>
+      <b aria-hidden="true">→</b>
+      <span>Specialist services</span>
+      <b aria-hidden="true">→</b>
+      <span>Underwriter review</span>
     </div>
-    <figcaption id="platform-diagram-caption">
-      A deliberately abstracted view of the workflow. The highlighted services show my
-      primary focus; the orchestration layer and wider platform were team efforts.
+    <div className="simple-architecture__focus">
+      My focus: financial research and quotation generation
+    </div>
+    <figcaption>
+      A simplified public view of the project. Pe’ahi itself was a wider team effort.
     </figcaption>
   </figure>
 );
-
-const BoundaryDiagram = () => (
-  <figure className="article-figure" aria-labelledby="boundary-diagram-caption">
-    <div className="boundary-diagram" role="img" aria-label="Decision boundary between probabilistic methods for ambiguous inputs and deterministic software for validated business outputs.">
-      <section className="boundary-panel boundary-panel--ai">
-        <p className="boundary-panel__kicker">Use probability to</p>
-        <h3>Resolve ambiguity</h3>
-        <ul>
-          <li>Interpret incomplete names</li>
-          <li>Rank likely matches</li>
-          <li>Navigate domain knowledge</li>
-        </ul>
-      </section>
-      <div className="boundary-divider" aria-hidden="true">
-        <span>typed boundary</span>
-      </div>
-      <section className="boundary-panel boundary-panel--rules">
-        <p className="boundary-panel__kicker">Use rules to</p>
-        <h3>Guarantee behavior</h3>
-        <ul>
-          <li>Validate required fields</li>
-          <li>Apply approved logic</li>
-          <li>Assemble final documents</li>
-        </ul>
-      </section>
-    </div>
-    <figcaption id="boundary-diagram-caption">
-      Probabilistic methods narrow uncertainty. Typed contracts and deterministic rules
-      take over before consequential business outputs are produced.
-    </figcaption>
-  </figure>
-);
-
-const QuotationFlow = () => {
-  const steps = [
-    ['01', 'Structured input', 'Account, policy and coverage details'],
-    ['02', 'Validation', 'Types, required fields and constraints'],
-    ['03', 'Rule derivation', 'Approved defaults and conditions'],
-    ['04', 'Document assembly', 'Templates, clauses and formatting'],
-    ['05', 'Human review', 'Preview, approve and distribute'],
-  ];
-
-  return (
-    <figure className="article-figure" aria-labelledby="quotation-diagram-caption">
-      <ol className="flow-diagram">
-        {steps.map(([number, title, detail]) => (
-          <li className="flow-step" key={number}>
-            <span className="flow-step__number">{number}</span>
-            <strong>{title}</strong>
-            <small>{detail}</small>
-          </li>
-        ))}
-      </ol>
-      <figcaption id="quotation-diagram-caption">
-        Quotation generation was a visible, testable pipeline—not a single prompt that
-        jumped directly from an email to a business document.
-      </figcaption>
-    </figure>
-  );
-};
 
 const PeahiBlogPost = () => {
   useEffect(() => {
-    document.title = 'Where AI Stops and Business Rules Begin | Jaehyeok Choi';
+    document.title = 'Riding the Agentic Wave: Building Pe’ahi | Jaehyeok Choi';
   }, []);
 
   return (
@@ -105,275 +41,283 @@ const PeahiBlogPost = () => {
           <Link className="article-back" to="/blog">
             <ArrowBackIcon fontSize="small" /> Back to Blog
           </Link>
-          <p className="eyebrow">AI Engineering · Internship Case Study</p>
-          <h1>Where AI Stops and Business Rules Begin</h1>
+
+          <div className="article-brand">
+            <img src={zurichLogo} alt="Zurich Insurance logo" />
+            <span>Internship reflection · AI engineering</span>
+          </div>
+
+          <h1>Riding the Agentic Wave: What I Learned Building Pe’ahi</h1>
           <p className="article-deck">
-            What I learned building financial-research and quotation services for an
-            agent-driven underwriting project during my internship at Zurich Insurance.
+            An internship story about underwriting agents, messy company names,
+            stubborn Word documents, and learning where AI should stop.
           </p>
           <div className="article-byline">
             <span>Jaehyeok Choi</span>
             <span>August 2026</span>
             <span>10 min read</span>
           </div>
-          <div className="article-disclosure">
-            This article reflects my own experience. Technical details and examples are
-            deliberately simplified; no customer data, proprietary rules or internal
-            system identifiers are included.
-          </div>
+
+          <figure className="article-cover">
+            <img
+              src={peahiWave}
+              alt="A surfer riding through a large blue wave"
+            />
+            <figcaption>
+              Pe’ahi was named after the wave—a fitting symbol for the agentic wave
+              moving through underwriting.
+            </figcaption>
+          </figure>
         </header>
 
-        <div className="article-layout">
-          <aside className="article-sidebar">
-            <nav className="article-toc" aria-label="Article contents">
-              <p>In this article</p>
-              <a href="#problem">The real problem</a>
-              <a href="#architecture">System and ownership</a>
-              <a href="#financial">Resolving identity</a>
-              <a href="#quotation">Encoding judgment</a>
-              <a href="#production">Production engineering</a>
-              <a href="#stakeholders">Working with experts</a>
-              <a href="#lessons">Results and lessons</a>
-              <a href="#next">What I would build next</a>
-            </nav>
-          </aside>
+        <div className="article-content">
+          <p className="article-lede">
+            Pe’ahi is the name of a formidable wave. It also became the name of the
+            agentic underwriting project I joined during my internship at Zurich Insurance.
+            The metaphor was intentional: AI was arriving in underwriting like a new wave,
+            and our job was to work out how to ride it responsibly.
+          </p>
 
-          <div className="article-content">
-            <p className="article-lede">
-              When I began my internship at Zurich Insurance, I expected the hardest part
-              of building an underwriting agent to be prompting the model. It was not. The
-              real challenge was deciding which decisions could tolerate probabilistic
-              reasoning—and which had to remain deterministic, explainable and reproducible.
+          <p>
+            It turned out to be a very good name. Some days we were discussing how agents
+            could coordinate complex insurance work. On other days, I was trying to stop a
+            Word footer from swallowing a legal clause. Both were part of building production
+            AI. Only one looked exciting on an architecture diagram.
+          </p>
+
+          <div className="article-note">
+            This article is based on my own experience. The architecture and examples are
+            intentionally simplified, and no customer data, proprietary underwriting rules,
+            or internal system identifiers are included.
+          </div>
+
+          <section>
+            <h2>I thought the difficult part would be the model</h2>
+            <p>
+              Before the internship, “building an AI agent” sounded mostly like a model and
+              prompting problem. Choose the right model, write a clever system prompt, connect
+              a few tools, and watch the agent go. That picture is not completely wrong. It is
+              simply missing most of the work.
             </p>
+            <p>
+              Commercial underwriting does not begin with a tidy request. Information arrives
+              through emails, attachments, company names that do not quite match database
+              records, and policy details accumulated across conversations. The underwriter
+              has to turn those fragments into a defensible view of a business before deciding
+              what can be offered.
+            </p>
+            <p>
+              A model can help with ambiguity. It cannot make ambiguity disappear. Once an
+              output affects a quotation, the system needs validation, provenance, explicit
+              rules, useful failure states, and a human who can inspect what happened. The hard
+              question was not “How autonomous can we make this?” It was “Where does autonomy
+              help, and where would it create unnecessary risk?”
+            </p>
+          </section>
+
+          <section>
+            <h2>Pe’ahi in one minute</h2>
+            <p>
+              Pe’ahi was designed as an agent-driven workflow for commercial underwriting.
+              Instead of asking one enormous model to understand every document, research a
+              company, assess risk, price a policy, and prepare a quotation, the platform split
+              the work across an orchestration layer and specialist services. An underwriter
+              remained in the loop for consequential decisions.
+            </p>
+
+            <SimpleArchitecture />
 
             <p>
-              I worked on an internal agent-driven platform for commercial insurance
-              underwriting. My primary responsibility was developing two services: a
-              financial-research service that identified companies and assembled structured
-              information, and a quotation service that converted underwriting inputs into
-              validated business documents.
+              My main work sat in two parts of that flow: financial research and quotation
+              generation. The wider orchestration platform was a team effort. Being precise
+              about that distinction matters to me; good engineering is collaborative, and a
+              portfolio should not quietly turn “we built” into “I built.”
+            </p>
+          </section>
+
+          <section>
+            <h2>Company names are surprisingly slippery</h2>
+            <p>
+              My work on the financial service began with a deceptively simple question:
+              which company are we talking about?
+            </p>
+            <p>
+              A submission might use a familiar brand while the data provider stores a legal
+              parent. It might refer to a subsidiary, omit punctuation, use a ticker, or contain
+              only part of an identifier. Private companies add another layer of difficulty
+              because the available information is often less uniform.
+            </p>
+            <p>
+              I worked on a preprocessing and retrieval flow that normalized the available
+              identity signals, generated possible matches, ranked the candidates semantically,
+              and then retrieved financial information from approved sources. Before another
+              service could use the result, it passed through typed validation and explicit
+              source-handling rules.
+            </p>
+            <ol className="plain-steps">
+              <li><strong>Normalize the input.</strong> Treat names and identifiers as evidence, not unquestionable truth.</li>
+              <li><strong>Rank possible entities.</strong> Use semantic similarity where the input is genuinely ambiguous.</li>
+              <li><strong>Retrieve and reconcile.</strong> Combine approved sources without silently hiding disagreements.</li>
+              <li><strong>Return a typed response.</strong> Downstream systems should receive a contract, not a guess in paragraph form.</li>
+            </ol>
+            <p>
+              This was where probabilistic methods earned their place. They were useful for
+              narrowing uncertainty. But the ranking score did not get to declare itself truth
+              and wander into the rest of the platform unsupervised.
+            </p>
+          </section>
+
+          <section>
+            <h2>The quotation agent taught me where AI should stop</h2>
+            <p>
+              My second major area was quotation generation. At first glance, this looked like
+              document automation: take the underwriting inputs, fill a template, attach the
+              relevant wording, and produce a file. The real challenge was the business logic
+              hiding behind the document.
+            </p>
+            <p>
+              Underwriters were making decisions about defaults, coverage details, conditions,
+              and legal wording. Those decisions needed to be represented consistently and
+              reviewed. I used Pydantic models to turn the agreed inputs and rules into a typed
+              source of truth. Cross-field validation caught inconsistent combinations, while a
+              deterministic derivation layer applied approved business logic.
+            </p>
+            <p>
+              The distinction became one of my clearest lessons from the internship:
+              <strong> use AI to interpret ambiguity; use deterministic software to make commitments.</strong>
+              Natural-language assistance could help someone explore domain knowledge. Final
+              document conditions could not depend on a model feeling creative that afternoon.
             </p>
 
-            <div className="project-snapshot" aria-label="Project snapshot">
-              <div><span>Role</span><strong>Data Scientist Intern</strong></div>
-              <div><span>Domain</span><strong>Commercial insurance</strong></div>
-              <div><span>Primary focus</span><strong>Financial + quotation services</strong></div>
-              <div><span>Core stack</span><strong>Python, FastAPI, Pydantic, Azure</strong></div>
-            </div>
+            <h3>A Word document is not “just a Word document”</h3>
+            <p>
+              Then came document generation. A `.docx` file is effectively a bundle of XML
+              wearing a tie. Once I had to preserve numbering, tables, page breaks, and formatting
+              while combining reusable document sections, ordinary placeholder replacement was
+              no longer enough. Some operations required working closer to the OOXML structure.
+            </p>
+            <p>
+              I also moved away from an early attempt to make different quotation structures fit
+              one elegant abstraction. Separate templates introduced a little duplication, but
+              they made behavior easier to reason about and safer to maintain. It was a useful
+              reminder that the cleanest whiteboard design is not always the kindest design for
+              the person debugging it later.
+            </p>
+          </section>
 
-            <section id="problem">
-              <p className="section-number">01</p>
-              <h2>The real problem was not generating text</h2>
-              <p>
-                A commercial underwriting submission rarely arrives as a clean JSON object.
-                It can begin as an email with attachments, inconsistent company names,
-                incomplete financial information and policy details carried over from earlier
-                conversations. An underwriter must assemble those fragments into a defensible
-                view before deciding coverage and producing a quotation.
-              </p>
-              <p>
-                The workflow contains uncertainty, but its final outputs cannot be casual. A
-                mistaken company match affects every downstream financial field. An incorrect
-                document condition can alter the meaning of a quotation. The goal was therefore
-                not simply to “make an agent autonomous.” It was to reduce repetitive work while
-                preserving the control and reviewability an underwriter needs.
-              </p>
-              <blockquote>
-                Production AI was less about giving a model more freedom and more about
-                designing safe boundaries around uncertainty.
-              </blockquote>
-            </section>
+          <section>
+            <h2>The underwriters were part of the engineering system</h2>
+            <p>
+              Many rules did not arrive in a specification precise enough to implement. They
+              existed as professional judgment: use a condition in the usual case, look at a
+              combination of indicators, or escalate when two pieces of information conflict.
+            </p>
+            <p>
+              I learned to slow the conversation down and walk through the decision field by
+              field. What happens if this value is missing? What if two sources disagree? Is this
+              a default or a requirement? Which exceptions matter? I would then reflect the answer
+              back as a schema, a decision table, or an example output and ask the underwriter to
+              challenge it.
+            </p>
+            <p>
+              That process changed how I think about schema design. A schema is not merely a
+              backend convenience. In a domain-heavy system, it is a shared language between
+              business knowledge and executable software. If the conversation is vague, the code
+              will eventually become vague too—just with better indentation.
+            </p>
+          </section>
 
-            <section id="architecture">
-              <p className="section-number">02</p>
-              <h2>The platform—and the part I owned</h2>
-              <p>
-                The wider project connected an orchestration layer with several specialist
-                services. Each service handled a bounded part of the underwriting workflow,
-                while a human underwriter remained responsible for reviewing consequential
-                outputs.
-              </p>
-              <p>
-                I focused on financial research and quotation generation, together with the
-                API contracts that connected those services to the wider workflow. Keeping this
-                distinction explicit matters: the surrounding platform was a team effort, while
-                these services were where I spent most of my implementation and stakeholder time.
-              </p>
-              <PlatformDiagram />
-            </section>
+          <section>
+            <h2>Production is where the prototype starts paying rent</h2>
+            <p>
+              A local demo could prove that the idea worked. It could not prove that another team
+              could safely depend on it. The services also needed stable API contracts, strict
+              validation, asynchronous handling for slow work, observable failures, repeatable
+              deployment, and tests around integration boundaries.
+            </p>
+            <p>
+              The tools included Python, FastAPI, Pydantic, queues for asynchronous processing,
+              tracing for agent behavior, Docker, automated delivery, and Azure container
+              infrastructure. The stack mattered, but the reasons mattered more:
+            </p>
+            <ul className="article-list">
+              <li>Typed contracts kept services honest when schemas changed.</li>
+              <li>Queued work kept slow external retrieval away from immediate request paths.</li>
+              <li>Tracing helped separate model problems from data and integration problems.</li>
+              <li>Preview and review steps made automation easier for underwriters to trust.</li>
+              <li>Tests gave the team a safer way to change a fast-moving agentic system.</li>
+            </ul>
+            <p>
+              None of these features produces an impressive chatbot screenshot. They are also
+              the features that decide whether a chatbot demo can become a useful service.
+            </p>
+          </section>
 
-            <section id="financial">
-              <p className="section-number">03</p>
-              <h2>Challenge one: resolving a company before evaluating it</h2>
-              <p>
-                Financial research starts with a deceptively difficult question: which company
-                are we talking about? A submission may use a trading name instead of a legal
-                entity, omit punctuation, refer to a subsidiary, or contain only a partial
-                identifier. Public and private companies also expose different levels of data.
-              </p>
-              <p>
-                I developed a preprocessing and retrieval flow that accepted several identity
-                signals, normalized them, generated candidate companies and ranked the likely
-                matches. Once an identity was established, the service retrieved information
-                from approved sources, reconciled overlapping values and returned a typed API
-                response.
-              </p>
+          <section>
+            <h2>What I can honestly claim</h2>
+            <p>
+              I would love to finish the project section with a suspiciously precise claim such
+              as “improved underwriting productivity by 73%.” I cannot. I do not have an approved
+              production measurement I can publish, and inventing one would be a strange way to
+              advertise reliability.
+            </p>
+            <p>
+              What I can defend is that I helped take two bounded services from domain
+              conversations to deployed software. One turned uncertain company inputs into
+              structured financial responses. The other transformed validated underwriting
+              inputs into reviewable quotation documents. Along the way, I worked across API
+              design, business rules, document generation, testing, observability, CI/CD, and
+              cloud deployment.
+            </p>
+            <p>
+              That is less cinematic than “AI transformed underwriting overnight.” It is also a
+              much better description of useful engineering.
+            </p>
+          </section>
 
-              <div className="pipeline-grid" role="img" aria-label="Financial research pipeline from mixed identifiers through candidate ranking and source reconciliation to a validated response.">
-                <div><span>Input</span><strong>Names + identifiers</strong></div>
-                <div><span>Resolve</span><strong>Normalize + rank candidates</strong></div>
-                <div><span>Retrieve</span><strong>Approved data sources</strong></div>
-                <div><span>Return</span><strong>Validated response</strong></div>
-              </div>
+          <section>
+            <h2>The lessons I kept</h2>
+            <ul className="lessons-list">
+              <li><strong>Use AI at the uncertainty boundary.</strong> Semantic methods are valuable when inputs are messy. Commitments still need explicit controls.</li>
+              <li><strong>Agents are distributed systems with an unusually charming failure mode.</strong> Queues, retries, contracts, and observability matter as much as model choice.</li>
+              <li><strong>Domain translation is engineering.</strong> Good questions and counterexamples can prevent more bugs than another abstraction layer.</li>
+              <li><strong>Human review is a feature.</strong> In consequential workflows, a thoughtful handoff is better than pretending uncertainty does not exist.</li>
+              <li><strong>Simple and predictable usually wins.</strong> Especially when the alternative is a clever system nobody wants to maintain.</li>
+            </ul>
+          </section>
 
-              <p>
-                This was an appropriate place for semantic methods because the input itself was
-                ambiguous. But the ranking result did not automatically become the system’s
-                truth. It still had to cross validation, source-priority and error-handling
-                boundaries before another service could consume it.
-              </p>
-            </section>
+          <section>
+            <h2>What I would build next</h2>
+            <p>
+              If I continued the project, I would focus less on adding more agents and more on
+              measuring the ones already present. My next priorities would be:
+            </p>
+            <ol className="plain-steps">
+              <li><strong>A versioned evaluation set</strong> built from anonymized, expert-reviewed cases.</li>
+              <li><strong>Confidence-aware escalation</strong> so uncertain matches become visible review tasks rather than hidden assumptions.</li>
+              <li><strong>End-to-end operational traces</strong> linking retrieval, validation, rule execution, document generation, and human approval.</li>
+            </ol>
+            <p>
+              Those capabilities would make quality visible over time and turn underwriter
+              corrections into durable improvements instead of one-off fixes.
+            </p>
+          </section>
 
-            <section id="quotation">
-              <p className="section-number">04</p>
-              <h2>Challenge two: turning underwriting judgment into executable rules</h2>
-              <p>
-                The quotation project began with a manual document workflow. The apparent task
-                was filling templates. The deeper task was discovering and formalizing the
-                decision process behind them: which information was required, how defaults were
-                derived, which conditions affected coverage wording and what needed human review.
-              </p>
-              <p>
-                I designed the service around Pydantic models as the source of truth. The schema
-                represented account, coverage and policy inputs; cross-field validators caught
-                inconsistent combinations; and a deterministic derivation layer applied only
-                approved business logic. The final stage assembled the relevant document
-                sections while preserving their formatting and structure.
-              </p>
-
-              <BoundaryDiagram />
-
-              <p>
-                The important design decision was where not to use an LLM. Natural-language
-                assistance could help someone navigate domain documentation, but final condition
-                selection and document composition followed validated, testable rules. The model
-                could assist at an ambiguity boundary; it could not improvise consequential
-                wording.
-              </p>
-
-              <QuotationFlow />
-
-              <h3>Document generation became a systems problem</h3>
-              <p>
-                Generating a Word file was more involved than replacing placeholders. Reusable
-                clauses carried their own numbering, tables, page breaks and formatting. A
-                high-level document library covered ordinary operations, but preserving
-                structure across combined documents sometimes required lower-level OOXML work.
-              </p>
-              <p>
-                I also learned to prefer predictable designs over premature abstraction. A more
-                unified template initially looked elegant, but separating genuinely different
-                document structures made behavior easier to test and maintain. The cleanest
-                diagram is not always the safest production implementation.
-              </p>
-            </section>
-
-            <section id="production">
-              <p className="section-number">05</p>
-              <h2>Making the services production-ready</h2>
-              <p>
-                Shipping inside an enterprise environment changed the definition of “working.”
-                A successful local demo was only the beginning. The services needed stable API
-                contracts, strict validation, useful failure states, containerized deployment
-                and predictable behavior when external dependencies were slow or unavailable.
-              </p>
-              <ul className="article-list">
-                <li><strong>Typed boundaries:</strong> FastAPI and Pydantic aligned HTTP schemas, domain models and validation.</li>
-                <li><strong>Asynchronous work:</strong> long-running retrieval could move away from the immediate request path.</li>
-                <li><strong>Observability:</strong> tracing helped separate model behavior from data-provider and service failures.</li>
-                <li><strong>Deployment:</strong> containers and automated delivery created a repeatable path between code and environment.</li>
-                <li><strong>Integration safety:</strong> contract and integration tests protected downstream consumers as schemas evolved.</li>
-              </ul>
-              <p>
-                The quotation workflow also offered a preview path so derived values could be
-                inspected before generating and storing the final document. Controls like this
-                are less dramatic than an agent demo, but they are what make automation easier
-                for another team to trust.
-              </p>
-            </section>
-
-            <section id="stakeholders">
-              <p className="section-number">06</p>
-              <h2>The most valuable data source was an underwriter conversation</h2>
-              <p>
-                Many rules did not begin in a specification precise enough to code. They existed
-                as professional judgment: use a certain condition in the usual case, check a
-                combination of indicators, or escalate when information conflicts. My job was to
-                turn that knowledge into a deterministic schema without flattening important
-                exceptions.
-              </p>
-              <p>
-                I learned to walk through decisions field by field, ask what should happen when
-                information was missing and test counterexamples rather than accepting the first
-                happy path. I then reflected the rule back as a schema, decision table or example
-                output for confirmation. Schema design became more than a backend task—it became
-                a negotiated representation of underwriting knowledge.
-              </p>
-            </section>
-
-            <section id="lessons">
-              <p className="section-number">07</p>
-              <h2>Results I can defend—and lessons I kept</h2>
-              <p>
-                I do not want to manufacture an efficiency percentage without an approved
-                production measurement. The concrete outcome is that I helped take two bounded
-                services from domain conversations to deployed software: one resolved uncertain
-                company inputs into structured financial responses, and the other transformed
-                validated underwriting inputs into reviewable quotation documents.
-              </p>
-
-              <div className="lesson-grid">
-                <div><span>01</span><h3>Use AI at the uncertainty boundary</h3><p>Semantic methods are useful when the input is ambiguous. Consequential outputs still need typed contracts and controls.</p></div>
-                <div><span>02</span><h3>Domain translation is engineering</h3><p>Good questions, decision tables and counterexamples can matter as much as implementation skill.</p></div>
-                <div><span>03</span><h3>Agents are distributed systems</h3><p>Queues, retries, contracts, observability and failure semantics determine whether an agent survives production.</p></div>
-                <div><span>04</span><h3>Trust must be designed</h3><p>Preview modes, deterministic rules and human approval make automation easier to adopt.</p></div>
-              </div>
-            </section>
-
-            <section id="next">
-              <p className="section-number">08</p>
-              <h2>What I would build next</h2>
-              <p>
-                If I continued the project, I would focus less on adding more agents and more on
-                measuring the agents already present. My next iteration would center on:
-              </p>
-              <ol className="article-list article-list--numbered">
-                <li><strong>A versioned evaluation set</strong> built from anonymized, expert-reviewed cases, with separate measures for identity matching, field completeness and rule correctness.</li>
-                <li><strong>Confidence-aware escalation</strong> so uncertain matches or conflicting source values become explicit review tasks instead of hidden assumptions.</li>
-                <li><strong>End-to-end operational traces</strong> connecting a request to retrieval, validation, rule evaluation, document generation and human approval.</li>
-              </ol>
-              <p>
-                Those capabilities would make quality visible over time and convert stakeholder
-                corrections into durable system improvements.
-              </p>
-            </section>
-
-            <section className="article-conclusion">
-              <p className="eyebrow">Final reflection</p>
-              <h2>A different definition of AI engineering</h2>
-              <p>
-                I entered the internship thinking primarily about models and agent frameworks.
-                I left thinking about boundaries: between uncertain and deterministic logic,
-                between a service and its consumers, and between automation and human judgment.
-              </p>
-              <p>
-                Reliable AI is rarely one clever prompt. It is a system of schemas, data sources,
-                business rules, failure handling, deployment infrastructure and conversations
-                with the people whose decisions the software is meant to support. That is the
-                kind of AI engineering I want to keep doing.
-              </p>
-            </section>
-          </div>
+          <section className="article-conclusion">
+            <h2>Leaving the wave with a different view of AI engineering</h2>
+            <p>
+              Pe’ahi was a fitting name. A wave is powerful, but riding it requires respect for
+              the forces around it. The same is true of agentic AI. The model matters, but so do
+              the data contracts, business rules, failure handling, human judgment, and people
+              who understand the domain better than the software ever will.
+            </p>
+            <p>
+              I entered the internship thinking mostly about models and agent frameworks. I left
+              thinking about boundaries: between probabilistic and deterministic logic, between
+              a service and its consumers, and between automation and accountability. That is the
+              kind of AI engineering I want to keep doing.
+            </p>
+          </section>
         </div>
       </article>
     </main>

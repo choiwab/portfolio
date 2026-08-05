@@ -14,5 +14,5 @@ test('renders the portfolio home page', () => {
 test('renders the Peahi engineering case study', () => {
   window.history.pushState({}, '', '/blog/building-reliable-ai-underwriting');
   render(<App />);
-  expect(screen.getByRole('heading', { name: /where ai stops and business rules begin/i })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /riding the agentic wave/i })).toBeInTheDocument();
 });

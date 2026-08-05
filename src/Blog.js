@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import peahiWave from './public/blog/peahi-wave.jpg';
 import './Blog.css';
 
 const Blog = () => {
@@ -11,30 +12,29 @@ const Blog = () => {
   return (
     <main className="blog-index">
       <header className="blog-index__header">
-        <p className="eyebrow">Writing</p>
-        <h1>Notes from building AI systems</h1>
+        <h1>Blog</h1>
         <p>
-          Engineering case studies about agentic AI, reliable software, and the
-          decisions between a prototype and a production system.
+          Notes on AI engineering, production software, and what I learned while
+          building both.
         </p>
       </header>
 
       <section className="blog-grid" aria-label="Blog posts">
-        <article className="post-card post-card--featured">
-          <div className="post-card__visual" aria-hidden="true">
-            <span className="post-card__node">ambiguous input</span>
-            <span className="post-card__line" />
-            <span className="post-card__node post-card__node--accent">typed decision</span>
-          </div>
+        <article className="post-card">
+          <img
+            className="post-card__image"
+            src={peahiWave}
+            alt="A surfer riding through a large blue wave"
+          />
           <div className="post-card__body">
             <div className="post-card__meta">
               <span>AI Engineering</span>
               <span>10 min read</span>
             </div>
-            <h2>Where AI Stops and Business Rules Begin</h2>
+            <h2>Riding the Agentic Wave: What I Learned Building Pe’ahi</h2>
             <p>
-              What I learned building financial-research and quotation services for
-              an agent-driven commercial underwriting platform at Zurich Insurance.
+              An internship story about underwriting agents, messy company names,
+              stubborn Word documents, and where AI should stop.
             </p>
             <Link className="post-card__link" to="/blog/building-reliable-ai-underwriting">
               Read the case study <ArrowForwardIcon fontSize="small" />
