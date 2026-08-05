@@ -161,7 +161,7 @@ const PeahiBlogPost = () => {
               alt="A surfer riding through a large blue wave"
             />
             <figcaption>
-              Pe’ahi was named after the wave—a fitting symbol for the agentic wave
+              Pe’ahi was named after the wave, a fitting symbol for the agentic wave
               moving through underwriting.
             </figcaption>
           </figure>
@@ -355,7 +355,7 @@ const PeahiBlogPost = () => {
               That process changed how I think about schema design. A schema is not merely a
               backend convenience. In a domain-heavy system, it is a shared language between
               business knowledge and executable software. If the conversation is vague, the code
-              will eventually become vague too—just with better indentation.
+              will eventually become vague too, just with better indentation.
             </p>
           </section>
 
@@ -405,7 +405,7 @@ const PeahiBlogPost = () => {
               trace needed to show more than a prompt and response: queue delay, tool selection,
               retrieval latency, validation failures, retries, token use, and the sources attached
               to the final result. That is how we could distinguish “the model reasoned poorly”
-              from “the data provider timed out”—two failures with very different fixes.
+              from “the data provider timed out.” Those are two failures with very different fixes.
             </p>
 
             <p>The engineering principles underneath that architecture were straightforward:</p>
