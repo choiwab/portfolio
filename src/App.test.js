@@ -15,4 +15,8 @@ test('renders the Peahi engineering case study', () => {
   window.history.pushState({}, '', '/blog/building-reliable-ai-underwriting');
   render(<App />);
   expect(screen.getByRole('heading', { name: /riding the agentic wave/i })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /Pe’ahi was a workflow, not a chatbot/i })).toBeInTheDocument();
+  expect(screen.getByRole('img', { name: /long-lived opportunity agent/i })).toBeInTheDocument();
+  expect(screen.getByRole('img', { name: /Azure queue buffers long-running work/i })).toBeInTheDocument();
+  expect(screen.queryByText(/What I can honestly claim/i)).not.toBeInTheDocument();
 });

@@ -29,12 +29,12 @@ const Blog = () => {
           <div className="post-card__body">
             <div className="post-card__meta">
               <span>AI Engineering</span>
-              <span>10 min read</span>
+              <span>12 min read</span>
             </div>
             <h2>Riding the Agentic Wave: What I Learned Building Pe’ahi</h2>
             <p>
-              An internship story about underwriting agents, messy company names,
-              stubborn Word documents, and where AI should stop.
+              An internship story about agentic workflows, messy company names,
+              production infrastructure, stubborn Word documents, and where AI should stop.
             </p>
             <Link className="post-card__link" to="/blog/building-reliable-ai-underwriting">
               Read the case study <ArrowForwardIcon fontSize="small" />

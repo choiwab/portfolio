@@ -5,26 +5,123 @@ import peahiWave from './public/blog/peahi-wave.jpg';
 import zurichLogo from './public/blog/zurich-logo.png';
 import './Blog.css';
 
-const SimpleArchitecture = () => (
-  <figure className="simple-architecture">
+const AgenticWorkflowDiagram = () => (
+  <figure className="technical-diagram">
     <div
-      className="simple-architecture__flow"
+      className="agent-workflow"
       role="img"
-      aria-label="Simplified workflow from an underwriting submission, through orchestration and specialist services, to underwriter review"
+      aria-label="A submission is triaged into a long-lived opportunity agent, which coordinates specialist financial, document, risk, pricing, CRM, and quotation services before typed results and sources are presented for underwriter review"
     >
-      <span>Submission</span>
-      <b aria-hidden="true">→</b>
-      <span>Orchestration</span>
-      <b aria-hidden="true">→</b>
-      <span>Specialist services</span>
-      <b aria-hidden="true">→</b>
-      <span>Underwriter review</span>
-    </div>
-    <div className="simple-architecture__focus">
-      My focus: financial research and quotation generation
+      <div className="diagram-chain">
+        <div className="diagram-node">
+          <strong>Submission + events</strong>
+          <small>Email, files, and user actions</small>
+        </div>
+        <span className="diagram-arrow" aria-hidden="true">→</span>
+        <div className="diagram-node">
+          <strong>Triage</strong>
+          <small>Classify and match the opportunity</small>
+        </div>
+        <span className="diagram-arrow" aria-hidden="true">→</span>
+        <div className="diagram-node diagram-node--primary">
+          <strong>Opportunity agent</strong>
+          <small>State, context, planning, and tool routing</small>
+        </div>
+      </div>
+
+      <div className="diagram-dispatch" aria-hidden="true">↓ dispatches bounded work</div>
+
+      <div className="diagram-specialists">
+        <div className="diagram-node diagram-node--focus">
+          <strong>Financial</strong>
+          <small>Entity resolution and financial evidence</small>
+        </div>
+        <div className="diagram-node">
+          <strong>Risk evidence</strong>
+          <small>Documents, claims, and public signals</small>
+        </div>
+        <div className="diagram-node">
+          <strong>Commercial tools</strong>
+          <small>CRM and pricing integrations</small>
+        </div>
+        <div className="diagram-node diagram-node--focus">
+          <strong>Quotation</strong>
+          <small>Rules, wording, and document assembly</small>
+        </div>
+      </div>
+
+      <div className="diagram-dispatch" aria-hidden="true">↓ structured results + provenance</div>
+
+      <div className="diagram-chain diagram-chain--finish">
+        <div className="diagram-node">
+          <strong>Validate + persist</strong>
+          <small>Typed contracts, state, and source lineage</small>
+        </div>
+        <span className="diagram-arrow" aria-hidden="true">→</span>
+        <div className="diagram-node diagram-node--human">
+          <strong>Underwriter review</strong>
+          <small>Inspect, correct, approve, or escalate</small>
+        </div>
+      </div>
     </div>
     <figcaption>
-      A simplified public view of the project. Pe’ahi itself was a wider team effort.
+      A simplified public view of Pe’ahi’s agentic workflow. Highlighted services were
+      my main areas of work; the wider platform was built by the team.
+    </figcaption>
+  </figure>
+);
+
+const InfrastructureDiagram = () => (
+  <figure className="technical-diagram">
+    <div
+      className="infrastructure-diagram"
+      role="img"
+      aria-label="FastAPI accepts a request, an Azure queue buffers long-running work, bounded workers call models and approved tools, Cosmos DB and Blob Storage persist state and artifacts, and live updates return to the underwriter interface, with observability across the entire path"
+    >
+      <div className="diagram-pipeline">
+        <div className="diagram-node">
+          <strong>FastAPI</strong>
+          <small>Validate and accept work</small>
+        </div>
+        <span className="diagram-arrow" aria-hidden="true">→</span>
+        <div className="diagram-node">
+          <strong>Azure queue</strong>
+          <small>Buffer long-running jobs</small>
+        </div>
+        <span className="diagram-arrow" aria-hidden="true">→</span>
+        <div className="diagram-node diagram-node--primary">
+          <strong>Worker pool</strong>
+          <small>Bounded concurrency and retries</small>
+        </div>
+        <span className="diagram-arrow" aria-hidden="true">→</span>
+        <div className="diagram-node">
+          <strong>Models + tools</strong>
+          <small>Reasoning, retrieval, and integrations</small>
+        </div>
+      </div>
+
+      <div className="diagram-storage-row">
+        <div className="diagram-node">
+          <strong>Cosmos DB</strong>
+          <small>Opportunity state and results</small>
+        </div>
+        <div className="diagram-node">
+          <strong>Blob Storage</strong>
+          <small>Documents and generated artifacts</small>
+        </div>
+        <div className="diagram-node diagram-node--human">
+          <strong>Underwriter UI</strong>
+          <small>Polling or live event updates</small>
+        </div>
+      </div>
+
+      <div className="diagram-observability">
+        OpenTelemetry + Langfuse · traces · latency · retries · model and tool failures
+      </div>
+    </div>
+    <figcaption>
+      The production path, simplified: containers and automated delivery made the same
+      service behavior repeatable across environments.
     </figcaption>
   </figure>
 );
@@ -55,7 +152,7 @@ const PeahiBlogPost = () => {
           <div className="article-byline">
             <span>Jaehyeok Choi</span>
             <span>August 2026</span>
-            <span>10 min read</span>
+            <span>12 min read</span>
           </div>
 
           <figure className="article-cover">
@@ -116,16 +213,51 @@ const PeahiBlogPost = () => {
           </section>
 
           <section>
-            <h2>Pe’ahi in one minute</h2>
+            <h2>Pe’ahi was a workflow, not a chatbot</h2>
             <p>
-              Pe’ahi was designed as an agent-driven workflow for commercial underwriting.
-              Instead of asking one enormous model to understand every document, research a
-              company, assess risk, price a policy, and prepare a quotation, the platform split
-              the work across an orchestration layer and specialist services. An underwriter
-              remained in the loop for consequential decisions.
+              Pe’ahi was designed as an agentic workflow for commercial underwriting. Instead
+              of asking one enormous model to understand every document, research a company,
+              assess risk, price a policy, and prepare a quotation in one heroic prompt, the
+              platform separated coordination from specialist work. An underwriter remained
+              in the loop for consequential decisions.
             </p>
 
-            <SimpleArchitecture />
+            <AgenticWorkflowDiagram />
+
+            <h3>The orchestration layer carried the case, not just the conversation</h3>
+            <p>
+              The central idea was a long-lived opportunity agent: one coordinator for an
+              underwriting opportunity, with typed state that could survive beyond a single
+              request. New emails, extracted files, completed research, and user actions arrived
+              as signals. A signal first updated the opportunity state; only signals requiring
+              new work woke the agent to reason about the next action. That distinction avoided
+              spending model calls on bookkeeping and made the workflow easier to replay.
+            </p>
+            <p>
+              When the agent did wake, it did not receive permission to improvise across the
+              business. It selected from bounded tools with structured inputs and outputs. A risk
+              assessment could fan out to financial, document, claims, and public-information
+              services in parallel, then consolidate their evidence. CRM, pricing, and quotation
+              capabilities remained separate tools because they had different contracts, failure
+              modes, and permissions.
+            </p>
+
+            <h3>The model reasoned; the control plane kept score</h3>
+            <p>
+              I came to think of Pe’ahi as two cooperating layers. The AI layer handled work that
+              benefited from language understanding: interpreting a request, resolving an entity,
+              deciding which specialist could help, and summarizing evidence. The control plane
+              handled state transitions, validation, retries, permissions, and persistence. Model
+              output entered the workflow as a proposal, not as a database write wearing a nicer
+              vocabulary.
+            </p>
+            <p>
+              Pydantic contracts validated tool calls at service boundaries, while source metadata
+              travelled with retrieved values so an underwriter could see where a conclusion came
+              from. At-least-once delivery also meant every activity had to be designed with
+              idempotency in mind: if a worker received the same task again, it should not create
+              a second quotation or quietly mutate the case twice.
+            </p>
 
             <p>
               My main work sat in two parts of that flow: financial research and quotation
@@ -236,42 +368,58 @@ const PeahiBlogPost = () => {
               deployment, and tests around integration boundaries.
             </p>
             <p>
-              The tools included Python, FastAPI, Pydantic, queues for asynchronous processing,
-              tracing for agent behavior, Docker, automated delivery, and Azure container
-              infrastructure. The stack mattered, but the reasons mattered more:
+              The tools included Python, FastAPI, Pydantic, Azure queues, Cosmos DB, Blob Storage,
+              Docker, automated delivery, and Azure container infrastructure. The stack mattered,
+              but the shape of the runtime mattered more.
             </p>
+
+            <InfrastructureDiagram />
+
+            <h3>Long-running work needed a different request path</h3>
+            <p>
+              Research and document processing can take longer than a normal HTTP request should
+              remain open. The API therefore validated the request, created a task, and placed it
+              on a queue. A bounded worker pool consumed tasks asynchronously, while the client
+              could poll or receive live events as state changed. This kept slow providers away
+              from the immediate request path and allowed independent scaling of API and worker
+              workloads.
+            </p>
+            <p>
+              Queues introduce their own personality. A worker can crash after doing the work but
+              before acknowledging it. A provider can throttle halfway through a fan-out. A large
+              file can outlive the queue’s original visibility window. We used retry and backoff,
+              visibility renewal, bounded concurrency, poison-task handling, and idempotent service
+              operations to make those cases explicit rather than optimistic.
+            </p>
+
+            <h3>State, artifacts, and traces served different jobs</h3>
+            <p>
+              Opportunity state and structured results belonged in a durable state store; source
+              documents and generated quotations belonged in object storage. Keeping those roles
+              separate made it easier to evolve a schema without treating a Word file like a row
+              in a database. The UI could then reconstruct the current case from persisted state
+              instead of depending on a worker still being alive.
+            </p>
+            <p>
+              OpenTelemetry and Langfuse connected the model and infrastructure views. A useful
+              trace needed to show more than a prompt and response: queue delay, tool selection,
+              retrieval latency, validation failures, retries, token use, and the sources attached
+              to the final result. That is how we could distinguish “the model reasoned poorly”
+              from “the data provider timed out”—two failures with very different fixes.
+            </p>
+
+            <p>The engineering principles underneath that architecture were straightforward:</p>
             <ul className="article-list">
               <li>Typed contracts kept services honest when schemas changed.</li>
-              <li>Queued work kept slow external retrieval away from immediate request paths.</li>
-              <li>Tracing helped separate model problems from data and integration problems.</li>
+              <li>Durable state let an opportunity continue across requests and worker restarts.</li>
+              <li>Queued work isolated slow or unreliable external dependencies.</li>
+              <li>Tracing separated model, data, integration, and infrastructure problems.</li>
               <li>Preview and review steps made automation easier for underwriters to trust.</li>
-              <li>Tests gave the team a safer way to change a fast-moving agentic system.</li>
+              <li>Containerized CI/CD and tests made changes repeatable across environments.</li>
             </ul>
             <p>
               None of these features produces an impressive chatbot screenshot. They are also
               the features that decide whether a chatbot demo can become a useful service.
-            </p>
-          </section>
-
-          <section>
-            <h2>What I can honestly claim</h2>
-            <p>
-              I would love to finish the project section with a suspiciously precise claim such
-              as “improved underwriting productivity by 73%.” I cannot. I do not have an approved
-              production measurement I can publish, and inventing one would be a strange way to
-              advertise reliability.
-            </p>
-            <p>
-              What I can defend is that I helped take two bounded services from domain
-              conversations to deployed software. One turned uncertain company inputs into
-              structured financial responses. The other transformed validated underwriting
-              inputs into reviewable quotation documents. Along the way, I worked across API
-              design, business rules, document generation, testing, observability, CI/CD, and
-              cloud deployment.
-            </p>
-            <p>
-              That is less cinematic than “AI transformed underwriting overnight.” It is also a
-              much better description of useful engineering.
             </p>
           </section>
 
