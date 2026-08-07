@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import peahiWave from './public/blog/peahi-wave.jpg';
+import deepAgentsHarness from './public/blog/deep-agents-harness.png';
 import './Blog.css';
 
 const Blog = () => {
@@ -21,19 +22,11 @@ const Blog = () => {
 
       <section className="blog-grid" aria-label="Blog posts">
         <article className="post-card">
-          <div
-            className="post-card__visual post-card__visual--harness"
-            role="img"
-            aria-label="A supervisor agent connected to two specialist agents and a row of MCP tools"
-          >
-            <div className="post-card__visual-node post-card__visual-node--primary">Supervisor</div>
-            <div className="post-card__visual-link" aria-hidden="true">↓</div>
-            <div className="post-card__visual-row">
-              <span>Finance</span>
-              <span>Underwriting</span>
-            </div>
-            <div className="post-card__visual-protocol">MCP tools</div>
-          </div>
+          <img
+            className="post-card__image"
+            src={deepAgentsHarness}
+            alt="A central AI agent connected to planning, specialist agents, files, and an execution interface"
+          />
           <div className="post-card__body">
             <div className="post-card__meta">
               <span>Agent Architecture</span>

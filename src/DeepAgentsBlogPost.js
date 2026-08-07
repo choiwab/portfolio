@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import deepAgentsHarness from './public/blog/deep-agents-harness.png';
 import './Blog.css';
 
 const HarnessDiagram = () => (
-  <figure className="technical-diagram">
+  <figure className="technical-diagram technical-diagram--teal">
     <div
       className="harness-map"
       role="img"
@@ -78,7 +79,7 @@ const HarnessDiagram = () => (
 );
 
 const MCPDiagram = () => (
-  <figure className="technical-diagram">
+  <figure className="technical-diagram technical-diagram--teal">
     <div
       className="mcp-map"
       role="img"
@@ -99,6 +100,12 @@ const MCPDiagram = () => (
           <strong>Domain server</strong>
           <small>Own the tool contract and execution</small>
         </div>
+      </div>
+
+      <div className="mcp-traffic" aria-hidden="true">
+        <span>Discover capabilities →</span>
+        <span>Invoke with typed input →</span>
+        <span>Return structured content ←</span>
       </div>
 
       <div className="mcp-primitives">
@@ -146,6 +153,17 @@ const DeepAgentsBlogPost = () => {
             <span>August 2026</span>
             <span>11 min read</span>
           </div>
+
+          <figure className="article-cover article-cover--agent-harness">
+            <img
+              src={deepAgentsHarness}
+              alt="Illustration of a central AI agent connected to planning, specialist agents, documents, and an execution interface"
+            />
+            <figcaption>
+              A visual shorthand for the harness: one coordinating agent, specialist
+              workstreams, files, and an execution surface.
+            </figcaption>
+          </figure>
         </header>
 
         <div className="article-content">
