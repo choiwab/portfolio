@@ -20,3 +20,13 @@ test('renders the Peahi engineering case study', () => {
   expect(screen.getByRole('img', { name: /Azure queue buffers long-running work/i })).toBeInTheDocument();
   expect(screen.queryByText(/What I can honestly claim/i)).not.toBeInTheDocument();
 });
+
+test('renders the Deep Agents and MCP field notes', () => {
+  window.history.pushState({}, '', '/blog/deep-agents-mcp-harness');
+  render(<App />);
+  expect(screen.getByRole('heading', { name: /I gave the agent a harness/i })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /A harness is not a smarter model/i })).toBeInTheDocument();
+  expect(screen.getByRole('img', { name: /Deep Agents supervisor/i })).toBeInTheDocument();
+  expect(screen.getByRole('img', { name: /MCP client manager/i })).toBeInTheDocument();
+  expect(screen.getByText(/reduced the manual-intervention rate by 28 percent/i)).toBeInTheDocument();
+});

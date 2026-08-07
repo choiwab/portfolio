@@ -7,6 +7,7 @@ import Education from './Education';
 import Extracurriculars from './Extracurriculars';
 import Blog from './Blog';
 import PeahiBlogPost from './PeahiBlogPost';
+import DeepAgentsBlogPost from './DeepAgentsBlogPost';
 import { AppBar, Toolbar, IconButton, Drawer, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -141,6 +142,7 @@ const App = () => {
             <Route path="/extracurriculars" element={<Extracurriculars />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/building-reliable-ai-underwriting" element={<PeahiBlogPost />} />
+            <Route path="/blog/deep-agents-mcp-harness" element={<DeepAgentsBlogPost />} />
           </Routes>
         </div>
         <Footer />

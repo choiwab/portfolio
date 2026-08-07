@@ -59,6 +59,73 @@ html {
   object-fit: cover;
 }
 
+.post-card__visual {
+  display: flex;
+  min-height: 250px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  box-sizing: border-box;
+  background-color: #0d0e14;
+  background-image:
+    linear-gradient(rgba(146, 153, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(146, 153, 255, 0.045) 1px, transparent 1px),
+    radial-gradient(circle at 50% 32%, rgba(146, 153, 255, 0.15), transparent 55%);
+  background-size: 22px 22px, 22px 22px, auto;
+}
+
+.post-card__visual-node,
+.post-card__visual-row span,
+.post-card__visual-protocol {
+  border: 1px solid var(--blog-border);
+  border-radius: 7px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.67rem;
+  font-weight: 650;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.post-card__visual-node {
+  width: 116px;
+  padding: 10px 12px;
+}
+
+.post-card__visual-node--primary {
+  border-color: rgba(146, 153, 255, 0.52);
+  background: rgba(146, 153, 255, 0.1);
+}
+
+.post-card__visual-link {
+  padding: 5px 0;
+  color: var(--blog-dim);
+  font-size: 0.72rem;
+}
+
+.post-card__visual-row {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.post-card__visual-row span {
+  padding: 9px 6px;
+}
+
+.post-card__visual-protocol {
+  width: 100%;
+  margin-top: 10px;
+  padding: 7px 10px;
+  border-color: rgba(136, 206, 179, 0.32);
+  background: rgba(136, 206, 179, 0.045);
+  box-sizing: border-box;
+  color: rgba(179, 224, 207, 0.72);
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
 .post-card__body {
   display: flex;
   flex-direction: column;
@@ -148,6 +215,23 @@ html {
   border-radius: 8px;
   background: #fff;
   object-fit: contain;
+}
+
+.article-brand__mark {
+  display: grid;
+  width: 68px;
+  height: 68px;
+  flex: 0 0 68px;
+  place-items: center;
+  border: 1px solid rgba(146, 153, 255, 0.42);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(146, 153, 255, 0.16), rgba(146, 153, 255, 0.035)),
+    #101117;
+  color: #d8daff;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
 .article-brand span {
@@ -251,6 +335,17 @@ html {
 
 .article-content strong {
   color: rgba(255, 255, 255, 0.92);
+}
+
+.article-content a {
+  color: #c7caff;
+  text-decoration-color: rgba(199, 202, 255, 0.42);
+  text-underline-offset: 3px;
+}
+
+.article-content a:hover {
+  color: #fff;
+  text-decoration-color: rgba(255, 255, 255, 0.72);
 }
 
 .technical-diagram {
@@ -362,6 +457,65 @@ html {
   text-align: center;
 }
 
+.harness-subagents {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.mcp-boundary {
+  padding: 10px 12px;
+  border: 1px solid rgba(136, 206, 179, 0.3);
+  border-radius: 7px;
+  background: rgba(136, 206, 179, 0.045);
+  color: rgba(179, 224, 207, 0.72);
+  font-size: 0.64rem;
+  font-weight: 650;
+  letter-spacing: 0.025em;
+  line-height: 1.45;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.harness-tool-row,
+.mcp-primitives {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.mcp-primitives {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.12);
+}
+
+.mcp-primitives > div {
+  display: flex;
+  flex-direction: column;
+  padding: 11px 10px;
+  border: 1px solid var(--blog-border);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.015);
+  text-align: center;
+}
+
+.mcp-primitives strong {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.7rem;
+  font-weight: 650;
+}
+
+.mcp-primitives small {
+  margin-top: 4px;
+  color: var(--blog-dim);
+  font-size: 0.62rem;
+  line-height: 1.4;
+}
+
 .plain-steps,
 .article-list,
 .lessons-list {
@@ -424,6 +578,11 @@ html {
     aspect-ratio: 16 / 9;
   }
 
+  .post-card__visual {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+
   .post-card__body {
     padding: 26px 24px 30px;
   }
@@ -439,6 +598,12 @@ html {
   .article-brand img {
     width: 58px;
     height: 58px;
+  }
+
+  .article-brand__mark {
+    width: 58px;
+    height: 58px;
+    flex-basis: 58px;
   }
 
   .article-hero h1 {
@@ -492,6 +657,15 @@ html {
   }
 
   .diagram-storage-row {
+    grid-template-columns: 1fr;
+  }
+
+  .harness-subagents {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .harness-tool-row,
+  .mcp-primitives {
     grid-template-columns: 1fr;
   }
 }
