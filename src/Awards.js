@@ -33,6 +33,7 @@ const Awards = () => {
             <p>Built Synaptica, a blockchain-based, decentralized multi-agent research platform, taking first place among 200+ participants.</p>
             <p>Presented the solution to 100+ industry leaders at the Singapore FinTech Festival 2025, bringing the prototype from the hackathon to an industry audience.</p>
             <div className="award-links">
+              <a href="https://youtu.be/yMustp3eNXw" target="_blank" rel="noopener noreferrer">Watch demo <ArrowOutwardIcon fontSize="small" /></a>
               <a href="https://singhacks.com/" target="_blank" rel="noopener noreferrer">SingHacks <ArrowOutwardIcon fontSize="small" /></a>
               <a href="https://www.fintechfestival.sg/" target="_blank" rel="noopener noreferrer">FinTech Festival <ArrowOutwardIcon fontSize="small" /></a>
             </div>
