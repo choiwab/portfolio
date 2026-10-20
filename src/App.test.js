@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
 
 jest.mock('./MapComponent', () => () => null);
@@ -30,4 +30,24 @@ test('renders the Deep Agents and MCP field notes', () => {
   expect(screen.getByRole('img', { name: /Deep Agents supervisor/i })).toBeInTheDocument();
   expect(screen.getByRole('img', { name: /MCP client manager/i })).toBeInTheDocument();
   expect(screen.getByText(/reduced the manual-intervention rate by 28 percent/i)).toBeInTheDocument();
+});
+
+test('moves SingHacks to Awards and opens all three recognitions from the menu', () => {
+  window.history.pushState({}, '', '/extracurriculars');
+  render(<App />);
+  expect(screen.queryByText(/Singhacks 2025/i)).not.toBeInTheDocument();
+
+  fireEvent.click(screen.getByRole('button', { name: 'menu' }));
+  fireEvent.click(screen.getByRole('link', { name: 'Awards' }));
+
+  expect(window.location.pathname).toBe('/awards');
+  expect(screen.getByRole('heading', { name: 'Awards & recognition' })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: 'SingHacks 2025' })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /OpenAI × Sea Regional Codex Hackathon/ })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /NUS SoC Venture Initiation Programme/ })).toBeInTheDocument();
+  expect(screen.getByText('S$10,000 Award')).toBeInTheDocument();
+  expect(screen.getByText(/One of 4 teams selected from 150/)).toBeInTheDocument();
+  expect(screen.getByRole('img', { name: /Grand Winner award/ })).toBeInTheDocument();
+  expect(screen.getByRole('img', { name: /Presenting Synthetic Shoppers/ })).toBeInTheDocument();
+  expect(screen.getByRole('link', { name: /Visit BrandCodes/ })).toHaveAttribute('href', 'https://brandcodes.io/');
 });

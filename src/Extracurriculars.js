@@ -7,7 +7,6 @@ import roka from './public/extracurriculars/roka.jpg';
 import mma from './public/extracurriculars/nusmma.jpg';
 import aiClub from './public/extracurriculars/aiclub.jpg';
 import nusfintech from './public/extracurriculars/Nusfintech.jpg';
-import singhacks from './public/singhacks/singhacks.png';
 
 const accentLink = { color: '#818cf8', textDecoration: 'none', '&:hover': { color: '#a5b4fc', textDecoration: 'none' } };
 const timelineHeader = {
@@ -23,23 +22,6 @@ const timelineHeader = {
 
 const Extracurriculars = () => {
   const extracurriculars = [
-    {
-      activity: 'Singhacks 2025 | Singapore',
-      role: '1st Place',
-      period: 'October - November 2025',
-      details: [
-        'Built a blockchain-based decentralized multi-agent research platform, securing first place among 200+ participants at Singhacks 2025',
-        <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.6)' }}>
-          ▪ Presented the solution to 100+ industry leaders at{' '}
-          <Link href="https://www.fintechfestival.sg/" target="_blank" rel="noopener noreferrer" sx={accentLink}>
-            Singapore Fintech Festival
-          </Link>
-          {' '}2025
-        </Typography>
-      ],
-      image: singhacks,
-      link: 'https://singhacks.com/'
-    },
     {
       activity: 'NUS Fintech Society | Singapore',
       role: 'Tech Lead',

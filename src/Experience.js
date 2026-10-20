@@ -5,6 +5,8 @@ import telenorpic from './public/company-logos/telenor.jpg';
 import paulacademy from './public/company-logos/paulacademy.jpg';
 import bondit from './public/company-logos/bondit.jpg';
 import continental from './public/company-logos/continental.jpg';
+import zurich from './public/company-logos/zurich.png';
+import brandcodes from './public/company-logos/brandcodes.png';
 
 const linkStyle = {
   color: '#818cf8',
@@ -14,6 +16,61 @@ const linkStyle = {
 
 const Experience = () => {
   const experiences = [
+    {
+      company: (
+        <a
+          href="https://brandcodes.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={linkStyle}
+          onMouseOver={(e) => e.currentTarget.style.color = '#a5b4fc'}
+          onMouseOut={(e) => e.currentTarget.style.color = '#818cf8'}
+        >
+          BRANDCODES
+        </a>
+      ),
+      title: 'CEO & Founder',
+      period: '2026 - Present',
+      description: (
+        <ul>
+          <li>Founded and lead BrandCodes, a digital product identity and GS1 2D-barcode platform, owning product strategy, roadmap, end-to-end development, and customer acquisition; secured 3 B2B customers.</li>
+          <li>Developed GS1 Digital Link resolver infrastructure connecting GTIN, serial, and batch identifiers to context-aware redirects and hosted product pages, enabling brands to update digital product experiences without reprinting packaging.</li>
+          <li>Architected scalable distributed Django/DRF services on GCP with Redis-backed workers, tenant-scoped role-based access control, and bulk product ingestion.</li>
+          <li>Designed a GS1-compliant URL networking layer supporting redirects, link shortening, custom aliases, and dynamic resolvers.</li>
+        </ul>
+      ),
+      languages: ['Product Strategy', 'B2B Sales', 'Django', 'Django REST Framework', 'Redis', 'GCP', 'GS1 Digital Link', 'RBAC'],
+      logo: brandcodes,
+      logoStyle: { backgroundColor: '#fff', padding: '16px', boxSizing: 'border-box', aspectRatio: '1 / 1', objectFit: 'contain' },
+    },
+    {
+      company: (
+        <a
+          href="https://www.zurich.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={linkStyle}
+          onMouseOver={(e) => e.currentTarget.style.color = '#a5b4fc'}
+          onMouseOut={(e) => e.currentTarget.style.color = '#818cf8'}
+        >
+          ZURICH INSURANCE
+        </a>
+      ),
+      title: 'AI Engineer Intern',
+      period: 'May 2026 - August 2026',
+      location: 'Singapore',
+      description: (
+        <ul>
+          <li>Developed an agentic underwriting platform within Zurich’s APAC Data &amp; Analytics team for commercial underwriting workflows.</li>
+          <li>Built a LangGraph underwriting agent with hybrid vector retrieval and tool calling over financial, policy, and risk data, increasing expert-graded recommendation accuracy from 62% to 82% across a 150-case evaluation set.</li>
+          <li>Re-architected workflows from synchronous FastAPI execution into Redis-backed Celery tasks, increasing jobs processed 2×.</li>
+          <li>Productionized Docker services on Azure Kubernetes Service with Pydantic contracts, Langfuse tracing, retries, and GitHub Actions CI/CD.</li>
+          <li>Engineered a LangChain Deep Agents harness that delegated tasks to specialized subagents and orchestrated MCP-exposed tools.</li>
+        </ul>
+      ),
+      languages: ['LangGraph', 'LangChain', 'FastAPI', 'Redis', 'Celery', 'Docker', 'Azure Kubernetes Service', 'Pydantic', 'Langfuse', 'GitHub Actions', 'MCP'],
+      logo: zurich,
+    },
     {
       company: (
         <a
@@ -137,12 +194,12 @@ const Experience = () => {
         }}>
           <Grid container spacing={3}>
             <Grid item xs={3}>
-              <img src={exp.logo} alt={exp.company} style={{ width: '100%', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.08)' }} />
+              <img src={exp.logo} alt={`${exp.company.props.children} logo`} style={{ width: '100%', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.08)', ...exp.logoStyle }} />
             </Grid>
             <Grid item xs={9}>
               <Typography variant="h6" sx={{ fontWeight: 600 }}>{exp.title}</Typography>
               <Typography variant="subtitle1" sx={{ color: 'rgba(255,255,255,0.7)' }}>{exp.company}</Typography>
-              <Typography variant="subtitle2" sx={{ color: 'rgba(255,255,255,0.4)', fontWeight: 400 }}>{exp.period}</Typography>
+              <Typography variant="subtitle2" sx={{ color: 'rgba(255,255,255,0.4)', fontWeight: 400 }}>{exp.period}{exp.location && ` · ${exp.location}`}</Typography>
               <Typography variant="body1" component="div" sx={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>{exp.description}</Typography>
               <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.75, mt: 1.5 }}>
                 {exp.languages.map((lang, i) => (

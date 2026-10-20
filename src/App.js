@@ -5,6 +5,7 @@ import Experience from './Experience';
 import Projects from './Projects';
 import Education from './Education';
 import Extracurriculars from './Extracurriculars';
+import Awards from './Awards';
 import Blog from './Blog';
 import PeahiBlogPost from './PeahiBlogPost';
 import DeepAgentsBlogPost from './DeepAgentsBlogPost';
@@ -51,6 +52,7 @@ const App = () => {
     { label: 'Projects', href: '/projects' },
     { label: 'Education', href: '/education' },
     { label: 'Extracurriculars', href: '/extracurriculars' },
+    { label: 'Awards', href: '/awards' },
     { label: 'Blog', href: '/blog' },
   ];
 
@@ -140,6 +142,7 @@ const App = () => {
             <Route path="/projects" element={<Projects />} />
             <Route path="/education" element={<Education />} />
             <Route path="/extracurriculars" element={<Extracurriculars />} />
+            <Route path="/awards" element={<Awards />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/building-reliable-ai-underwriting" element={<PeahiBlogPost />} />
             <Route path="/blog/deep-agents-mcp-harness" element={<DeepAgentsBlogPost />} />
