@@ -12,7 +12,7 @@ const Education = () => {
       period: 'August 2023 - May 2027',
       logo: nus,
       details: [
-        'Relevant Coursework: Database Systems, Software Engineering, Data Structures & Algorithms, Programming Methodology II, Computer Organization, Introduction to Business Analytics, IT Management and Organisation, Calculus for Computing, Linear Algebra for Computing, Digital Ethics and Data Privacy'
+        'Relevant Coursework: Database Systems Implementation, Big Data Systems for Data Science, Formal Methods for Software Engineering, Software Engineering Principles and Patterns, Introduction to Computer Networks, Digital Platforms for Business, Design and Analysis of Algorithms, Introduction to Machine Learning, Chinese 5, Database Systems, Software Engineering, Data Structures & Algorithms, Programming Methodology II, Computer Organization, Introduction to Business Analytics, IT Management and Organisation, Calculus for Computing, Linear Algebra for Computing, Digital Ethics and Data Privacy'
       ]
     },
     {
