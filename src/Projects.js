@@ -89,6 +89,9 @@ const Projects = () => {
       devpostLink: 'https://devpost.com/software/leet-99',
       logo: leet99Logo,
       images: [leet99Screenshot],
+      imageCaptions: [
+        'Coding Arena: Solve a coding challenge while choosing attack targets and tracking opponents, queued problems, and match events.',
+      ],
       languages: ['Next.js', 'Tailwind CSS', 'daisyUI', 'Monaco Editor', 'PartyKit', 'Judge0 CE', 'Supabase', 'Python']
     },
     {
@@ -100,6 +103,11 @@ const Projects = () => {
       pitchDeckLink: 'https://drive.google.com/file/d/1M6NUxfYQf7GqnETLo9S6jWGW2O60yNze/view?usp=sharing',
       logo: synapticaLogo,
       images: [synaptica1, synaptica2, synaptica3],
+      imageCaptions: [
+        '1. Research Console: Enter a research question and budget to begin planning a task with specialist agents.',
+        '2. Transaction History: Review past research queries, task status, and agent transaction costs.',
+        '3. Agent Marketplace: Browse registered agents by capability, reputation, and price per task.',
+      ],
       languages: ['Python', 'Node.js', 'React', 'PostgreSQL', 'SQLite', 'OpenAI API'],
       protocols: ['ERC-8004: Agent Discovery', 'x402: Payment Protocol'],
       descriptionLinks: {
@@ -115,6 +123,9 @@ const Projects = () => {
       videoLink: 'https://www.youtube.com/watch?v=EiD2VaJAxtw',
       logo: agenticfinLogo,
       images: [agenticfin],
+      imageCaptions: [
+        'Research Chat: Start a conversation about company performance, market trends, or financial concepts using suggested queries.',
+      ],
       languages: ['Langgraph', 'Langchain', 'React', 'MongoDB', 'Airflow', 'FinnHub API', 'FastAPI']
     },
     {
@@ -124,6 +135,9 @@ const Projects = () => {
       repoLink: 'https://github.com/choiwab/polymarket-visual',
       logo: pmvLogo,
       images: [pmv1],
+      imageCaptions: [
+        'Market Heat Map: Explore prediction markets in a treemap sized by trading volume and colored by outcome probability, with a minimum-volume filter.',
+      ],
       languages: ['Next.js', 'TypeScript', 'D3.js', 'SWR', 'Tailwind CSS', 'Lucide React']
     },
     {
@@ -134,6 +148,13 @@ const Projects = () => {
       readmeLink: 'https://docs.google.com/document/d/1jGK9rGxmfrxFYeRkWvg3JMLQygjcFFpXhwCW8a1Kddg/edit',
       logo: eatwise,
       images: [ewmain, ewfood, ewbody, ewcom, ewchart],
+      imageCaptions: [
+        '1. Daily Dashboard: Track remaining calories, macronutrient intake, meals, and water consumption.',
+        '2. Food Search: Find foods, compare serving sizes and nutrition details, and add a serving to a meal.',
+        '3. Body & Fitness Goals: Review calorie and nutrient goals, update profile information, and begin a body-type assessment.',
+        '4. Community: Browse posts about diet and nutrition or create an article to share with other users.',
+        '5. Historical Charts: Explore recorded weight over a selected date range.',
+      ],
       languages: ['React', 'CSS', 'Next.js', 'Firebase', 'Node.js']
     },
     {
@@ -143,6 +164,13 @@ const Projects = () => {
       readmeLink: 'https://docs.google.com/document/d/1gGGssixoUiZYSGmtBh4g9TQB3A6xMpVU2vPgZ1XFwes/edit?usp=sharing',
       logo: easyread,
       images: [erhome, input, paste, image, pdf],
+      imageCaptions: [
+        '1. Home & Input: Learn about Easy Read, upload a PDF, or enter text or a URL to simplify.',
+        '2. Source Article: An example news article used as the input for an Easy Read conversion.',
+        '3. Simplified Text: View the article rewritten into shorter sentences after submitting its URL.',
+        '4. Illustrated Output: View a passport illustration accompanying the simplified article, with an option to download a PDF.',
+        '5. PDF Export: Read the downloaded document containing the simplified text and accompanying illustration.',
+      ],
       languages: ['Python', 'Streamlit', 'LangChain', 'GPT API']
     },
     {
@@ -151,6 +179,13 @@ const Projects = () => {
       repoLink: 'https://github.com/choiwab/Octagon-Frenzy',
       logo: ufc,
       images: [main, character, gameplay, stage, leaderboard],
+      imageCaptions: [
+        '1. Main Menu: Start a new game or open the high-score leaderboard.',
+        '2. Character Selection & Controls: Choose fighters and review movement, blocking, punching, and kicking controls for both players.',
+        '3. Gameplay: Two fighters face off in the octagon with a round timer, health bars, and strike counters.',
+        '4. Match Result: Celebrate the winning fighter and enter a name for the leaderboard.',
+        '5. Leaderboard: View ranked player names and recorded match times.',
+      ],
       languages: ['Python', 'Processing']
     },
   ];
