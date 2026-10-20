@@ -15,7 +15,7 @@ test('shows AegisAI with its demo and accelerator link, then preserves other pro
   expect(screen.getByRole('link', { name: 'Video Demo' })).toHaveAttribute('href', 'https://youtu.be/AUiwShzJlwY');
   expect(screen.getByRole('link', { name: 'TinyFish Accelerator' })).toHaveAttribute('href', 'https://www.tinyfish.ai/accelerator');
   expect(screen.getByRole('link', { name: 'Read recognition post' })).toHaveAttribute('href', 'https://lnkd.in/p/gwPwpKVY');
-  expect(screen.queryByRole('link', { name: 'GitHub Repository' })).not.toBeInTheDocument();
+  expect(screen.getByRole('link', { name: 'GitHub Repository' })).toHaveAttribute('href', 'https://github.com/choiwab/aegisAI');
   expect(screen.getAllByRole('img', { name: /AegisAI screenshot/ })).toHaveLength(5);
 
   fireEvent.click(screen.getByRole('button', { name: 'Leet 99' }));
