@@ -4,7 +4,7 @@ import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import singhacksPhoto from './public/awards/Singhacks Photo.jpeg';
 import openaiSeaPhoto from './public/awards/OpenAI X Sea Hackathon Photo.png';
 import nusEnterpriseLogo from './public/awards/NUS-Enterprise.png';
-import aegisLogo from './public/Aegis/aegis-logo.png';
+import aegisLogo from './public/awards/aegis-logo.png';
 import './Awards.css';
 
 const Awards = () => {
@@ -18,7 +18,7 @@ const Awards = () => {
         <h1>Awards &amp; recognition</h1>
       </header>
 
-      <section className="awards-grid" aria-label="Hackathon awards">
+      <section className="awards-grid" aria-label="Awards and recognition">
         <article className="award-card" aria-labelledby="singhacks-title">
           <figure className="award-photo">
             <img src={singhacksPhoto} alt="The SingHacks 2025 team receiving the Grand Winner award at Singapore FinTech Festival" />
@@ -62,10 +62,7 @@ const Awards = () => {
             </div>
           </div>
         </article>
-      </section>
-
-      <section className="awards-venture" aria-label="Venture recognition">
-        <article className="award-card award-card--venture" aria-labelledby="nus-vip-title">
+        <article className="award-card" aria-labelledby="nus-vip-title">
           <div className="award-brand">
             <img src={nusEnterpriseLogo} alt="NUS Enterprise" loading="lazy" />
             <span>Venture Initiation Programme</span>
@@ -85,11 +82,9 @@ const Awards = () => {
             </div>
           </div>
         </article>
-      </section>
-      <section className="awards-venture" aria-label="Accelerator recognition">
-        <article className="award-card award-card--venture" aria-labelledby="tinyfish-title">
+        <article className="award-card" aria-labelledby="tinyfish-title">
           <div className="award-brand">
-            <img src={aegisLogo} alt="AegisAI logo" loading="lazy" />
+            <img src={aegisLogo} alt="TinyFish Accelerator logo" loading="lazy" />
             <span>Agentic brand protection</span>
           </div>
           <div className="award-body">

@@ -61,13 +61,14 @@ const Projects = () => {
       title: 'AegisAI',
       year: '2026',
       repoLink: 'https://github.com/choiwab/aegisAI',
-      description: 'AegisAI is a multi-tenant web-scanning platform for brand-protection teams investigating suspected counterfeit listings and online impersonation.\n\nBuilt with FastAPI, PostgreSQL, Redis, and Celery, it uses TinyFish web agents to autonomously navigate websites, execute multi-step discovery and investigation scans, and collect structured evidence with bounded retries and runtime budgets.\n\nA Next.js and TypeScript dashboard brings together live agent activity, risk-scored findings, screenshot evidence, and case escalation so analysts can review signals and track follow-up actions.\n\nFeatured by TinyFish in its third Pre-Flight accelerator cohort for AegisAI’s counterfeit discovery and investigation workflows.',
-      recognition: {
-        name: 'TinyFish Accelerator',
-        link: 'https://www.tinyfish.ai/accelerator',
-        result: 'Selected · Top 80 / 2,000+',
-        postLink: 'https://lnkd.in/p/gwPwpKVY',
-      },
+      description: (
+        <>
+          AegisAI is a multi-tenant brand-protection platform built with FastAPI, PostgreSQL, Redis, and Celery. TinyFish web agents autonomously scan websites and gather structured evidence with bounded retries, while a Next.js dashboard supports live monitoring, risk review, and case escalation. Selected for the{' '}
+          <Link href="https://www.tinyfish.ai/accelerator" target="_blank" rel="noopener noreferrer" sx={accentLinkSxInline}>TinyFish Accelerator</Link>
+          {' '}(top 80 / 2,000+) and featured in its third Pre-Flight cohort.
+        </>
+      ),
+      recognitionPostLink: 'https://lnkd.in/p/gwPwpKVY',
       videoLink: 'https://youtu.be/AUiwShzJlwY',
       logo: aegisLogo,
       images: [aegisDashboard, aegisDiscoveryConfig, aegisLiveDiscovery, aegisEvidence, aegisCase],
@@ -206,14 +207,6 @@ const Projects = () => {
                 {projects[selectedProject].year && (
                   <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.5)', mb: 1 }}>{projects[selectedProject].year}</Typography>
                 )}
-                {projects[selectedProject].recognition && (
-                  <Typography variant="body2" sx={{ color: '#e5bf78', mb: 1.5 }}>
-                    <Link href={projects[selectedProject].recognition.link} target="_blank" rel="noopener noreferrer" sx={{ color: 'inherit', '&:hover': { color: '#f5d79f' } }}>
-                      {projects[selectedProject].recognition.name}
-                    </Link>
-                    {' · '}{projects[selectedProject].recognition.result}
-                  </Typography>
-                )}
                 <Typography variant="body1" sx={{ whiteSpace: 'pre-line', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>
                   {projects[selectedProject].descriptionLinks ? (
                     <>
@@ -223,8 +216,8 @@ const Projects = () => {
                     projects[selectedProject].description
                   )}
                 </Typography>
-                {projects[selectedProject].recognition?.postLink && (
-                  <Link href={projects[selectedProject].recognition.postLink} target="_blank" rel="noopener noreferrer" sx={accentLinkSx}>
+                {projects[selectedProject].recognitionPostLink && (
+                  <Link href={projects[selectedProject].recognitionPostLink} target="_blank" rel="noopener noreferrer" sx={accentLinkSx}>
                     Read recognition post
                   </Link>
                 )}
