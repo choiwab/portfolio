@@ -29,8 +29,8 @@ const Awards = () => {
               <span>Oct – Nov 2025 · Singapore</span>
             </div>
             <h2 id="singhacks-title">SingHacks 2025</h2>
-            <p className="award-project">Decentralized multi-agent research</p>
-            <p>Built a blockchain-based, decentralized multi-agent research platform, taking first place among 200+ participants.</p>
+            <p className="award-project">Synaptica</p>
+            <p>Built Synaptica, a blockchain-based, decentralized multi-agent research platform, taking first place among 200+ participants.</p>
             <p>Presented the solution to 100+ industry leaders at the Singapore FinTech Festival 2025, bringing the prototype from the hackathon to an industry audience.</p>
             <div className="award-links">
               <a href="https://singhacks.com/" target="_blank" rel="noopener noreferrer">SingHacks <ArrowOutwardIcon fontSize="small" /></a>
@@ -75,7 +75,7 @@ const Awards = () => {
             <h2 id="nus-vip-title">NUS SoC Venture Initiation Programme</h2>
             <p className="award-project">BrandCodes · CEO &amp; Founder</p>
             <p>One of 4 teams selected from 150 for the Venture Initiation Programme Award, securing S$10,000 in qualifying support from NUS Enterprise and the School of Computing for BrandCodes.</p>
-            <p>Leading a digital product identity venture from product strategy to engineering and customer acquisition, with GS1 2D barcodes, Digital Link routing, dynamic product experiences, and 3 B2B customers.</p>
+            <p>Leading BrandCodes from product strategy to engineering and customer acquisition, with GS1 2D barcodes, Digital Link routing, dynamic product experiences, and 3 B2B customers.</p>
             <div className="award-links">
               <a href="https://brandcodes.io/" target="_blank" rel="noopener noreferrer">Visit BrandCodes <ArrowOutwardIcon fontSize="small" /></a>
               <a href="https://www.comp.nus.edu.sg/entrepreneurship/awards/iepsoc/" target="_blank" rel="noopener noreferrer">About VIP@SoC <ArrowOutwardIcon fontSize="small" /></a>
