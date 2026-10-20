@@ -33,6 +33,12 @@ import pmvLogo from './public/polymarket-visualiser/pmv-logo.png';
 import pmv1 from './public/polymarket-visualiser/pmv-1.png';
 import leet99Logo from './public/leet99/icon.png';
 import leet99Screenshot from './public/leet99/leet99.png';
+import aegisLogo from './public/Aegis/aegis-logo.png';
+import aegisDashboard from './public/Aegis/1. Dashboard.png';
+import aegisDiscoveryConfig from './public/Aegis/2. Configure Brand & Discovery.png';
+import aegisLiveDiscovery from './public/Aegis/3. See live gent discovery.png';
+import aegisEvidence from './public/Aegis/4. Inspect&review findings and evidence.png';
+import aegisCase from './public/Aegis/5.Esclate Case.png';
 
 const accentLinkSx = {
   color: '#818cf8',
@@ -51,6 +57,20 @@ const accentLinkSxInline = {
 
 const Projects = () => {
   const projects = [
+    {
+      title: 'AegisAI',
+      year: '2026',
+      description: 'AegisAI is a multi-tenant web-scanning platform for brand-protection teams investigating suspected counterfeit listings and online impersonation.\n\nBuilt with FastAPI, PostgreSQL, Redis, and Celery, it uses TinyFish web agents to autonomously navigate websites, execute multi-step discovery and investigation scans, and collect structured evidence with bounded retries and runtime budgets.\n\nA Next.js and TypeScript dashboard brings together live agent activity, risk-scored findings, screenshot evidence, and case escalation so analysts can review signals and track follow-up actions.',
+      recognition: {
+        name: 'TinyFish Accelerator',
+        link: 'https://www.tinyfish.ai/accelerator',
+        result: 'Selected · Top 80 / 2,000+',
+      },
+      videoLink: 'https://youtu.be/AUiwShzJlwY',
+      logo: aegisLogo,
+      images: [aegisDashboard, aegisDiscoveryConfig, aegisLiveDiscovery, aegisEvidence, aegisCase],
+      languages: ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'Celery', 'TinyFish Web Agent', 'Next.js', 'TypeScript', 'Pydantic', 'Docker', 'Supabase'],
+    },
     {
       title: 'Leet 99',
       description: 'A fast-paced real-time battle royale where 2-99 players race to solve bite-sized coding problems. Players compete to solve problems while deploying debuffs like Vim Lock, Flashbang, or DDOS attacks on opponents. Last coder standing wins! Inspired by Tetris 99, this project turns the solitary LeetCode grind into a multiplayer showdown.',
@@ -138,10 +158,10 @@ const Projects = () => {
         My Projects
       </Typography>
       <Grid container spacing={2}>
-        <Grid item xs={3}>
-          <List>
+        <Grid item xs={12} md={3}>
+          <List sx={{ display: { xs: 'flex', md: 'block' }, overflowX: { xs: 'auto', md: 'visible' }, gap: 0.5 }}>
             {projects.map((project, index) => (
-              <ListItem key={index} disablePadding>
+              <ListItem key={index} disablePadding sx={{ width: { xs: 'auto', md: '100%' }, flexShrink: 0 }}>
                 <ListItemButton
                   selected={selectedProject === index}
                   onClick={() => handleProjectClick(index)}
@@ -153,6 +173,7 @@ const Projects = () => {
                     padding: '10px 14px',
                     border: selectedProject === index ? '1px solid rgba(129,140,248,0.25)' : '1px solid transparent',
                     transition: 'all 0.15s ease',
+                    whiteSpace: { xs: 'nowrap', md: 'normal' },
                     '&:hover': {
                       backgroundColor: selectedProject === index ? 'rgba(129,140,248,0.12)' : 'rgba(255,255,255,0.04)',
                       color: selectedProject === index ? '#818cf8' : '#f5f5f5',
@@ -165,7 +186,7 @@ const Projects = () => {
             ))}
           </List>
         </Grid>
-        <Grid item xs={9}>
+        <Grid item xs={12} md={9}>
           <Paper elevation={0} sx={{
             padding: 3,
             marginBottom: 2,
@@ -180,6 +201,17 @@ const Projects = () => {
               </Grid>
               <Grid item xs={9}>
                 <Typography variant="h6" sx={{ fontWeight: 600 }}>{projects[selectedProject].title}</Typography>
+                {projects[selectedProject].year && (
+                  <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.5)', mb: 1 }}>{projects[selectedProject].year}</Typography>
+                )}
+                {projects[selectedProject].recognition && (
+                  <Typography variant="body2" sx={{ color: '#e5bf78', mb: 1.5 }}>
+                    <Link href={projects[selectedProject].recognition.link} target="_blank" rel="noopener noreferrer" sx={{ color: 'inherit', '&:hover': { color: '#f5d79f' } }}>
+                      {projects[selectedProject].recognition.name}
+                    </Link>
+                    {' · '}{projects[selectedProject].recognition.result}
+                  </Typography>
+                )}
                 <Typography variant="body1" sx={{ whiteSpace: 'pre-line', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>
                   {projects[selectedProject].descriptionLinks ? (
                     <>
@@ -194,9 +226,11 @@ const Projects = () => {
                     Visit Project
                   </Link>
                 )}
-                <Link href={projects[selectedProject].repoLink} target="_blank" rel="noopener" sx={accentLinkSx}>
-                  GitHub Repository
-                </Link>
+                {projects[selectedProject].repoLink && (
+                  <Link href={projects[selectedProject].repoLink} target="_blank" rel="noopener" sx={accentLinkSx}>
+                    GitHub Repository
+                  </Link>
+                )}
                 {projects[selectedProject].readmeLink && (
                   <Link href={projects[selectedProject].readmeLink} target="_blank" rel="noopener" sx={accentLinkSx}>
                     Project Report
@@ -261,7 +295,7 @@ const Projects = () => {
                 >
                   {projects[selectedProject].images.map((image, idx) => (
                     <SwiperSlide key={idx}>
-                      <img src={image} alt={`slide ${idx}`} style={{ width: '100%', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.08)' }} />
+                      <img src={image} alt={`${projects[selectedProject].title} screenshot ${idx + 1}`} style={{ width: '100%', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.08)' }} />
                     </SwiperSlide>
                   ))}
                 </Swiper>
