@@ -96,7 +96,7 @@ const Home = () => {
                 margin: 1
               }}>
                 <Typography variant="body1" align="center" sx={{ marginBottom: 2, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>
-                  I am from Seoul, South Korea. And I have lived in Seoul, Beijing, Abu Dhabi, and Singapore. I can speak Korean, English, and a little Chinese.
+                  I am from Seoul, South Korea. And I have lived in Seoul, Beijing, Abu Dhabi, and Singapore. I can speak Korean, English, and Chinese.
                 </Typography>
                 <MapComponent />
               </Box>
