@@ -60,11 +60,12 @@ const Projects = () => {
     {
       title: 'AegisAI',
       year: '2026',
-      description: 'AegisAI is a multi-tenant web-scanning platform for brand-protection teams investigating suspected counterfeit listings and online impersonation.\n\nBuilt with FastAPI, PostgreSQL, Redis, and Celery, it uses TinyFish web agents to autonomously navigate websites, execute multi-step discovery and investigation scans, and collect structured evidence with bounded retries and runtime budgets.\n\nA Next.js and TypeScript dashboard brings together live agent activity, risk-scored findings, screenshot evidence, and case escalation so analysts can review signals and track follow-up actions.',
+      description: 'AegisAI is a multi-tenant web-scanning platform for brand-protection teams investigating suspected counterfeit listings and online impersonation.\n\nBuilt with FastAPI, PostgreSQL, Redis, and Celery, it uses TinyFish web agents to autonomously navigate websites, execute multi-step discovery and investigation scans, and collect structured evidence with bounded retries and runtime budgets.\n\nA Next.js and TypeScript dashboard brings together live agent activity, risk-scored findings, screenshot evidence, and case escalation so analysts can review signals and track follow-up actions.\n\nFeatured by TinyFish in its third Pre-Flight accelerator cohort for AegisAI’s counterfeit discovery and investigation workflows.',
       recognition: {
         name: 'TinyFish Accelerator',
         link: 'https://www.tinyfish.ai/accelerator',
         result: 'Selected · Top 80 / 2,000+',
+        postLink: 'https://lnkd.in/p/gwPwpKVY',
       },
       videoLink: 'https://youtu.be/AUiwShzJlwY',
       logo: aegisLogo,
@@ -221,6 +222,11 @@ const Projects = () => {
                     projects[selectedProject].description
                   )}
                 </Typography>
+                {projects[selectedProject].recognition?.postLink && (
+                  <Link href={projects[selectedProject].recognition.postLink} target="_blank" rel="noopener noreferrer" sx={accentLinkSx}>
+                    Read recognition post
+                  </Link>
+                )}
                 {projects[selectedProject].link && (
                   <Link href={projects[selectedProject].link} target="_blank" rel="noopener" sx={accentLinkSx}>
                     Visit Project

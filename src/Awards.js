@@ -4,6 +4,7 @@ import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import singhacksPhoto from './public/awards/Singhacks Photo.jpeg';
 import openaiSeaPhoto from './public/awards/OpenAI X Sea Hackathon Photo.png';
 import nusEnterpriseLogo from './public/awards/NUS-Enterprise.png';
+import aegisLogo from './public/Aegis/aegis-logo.png';
 import './Awards.css';
 
 const Awards = () => {
@@ -81,6 +82,29 @@ const Awards = () => {
             <div className="award-links">
               <a href="https://brandcodes.io/" target="_blank" rel="noopener noreferrer">Visit BrandCodes <ArrowOutwardIcon fontSize="small" /></a>
               <a href="https://www.comp.nus.edu.sg/entrepreneurship/awards/iepsoc/" target="_blank" rel="noopener noreferrer">About VIP@SoC <ArrowOutwardIcon fontSize="small" /></a>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section className="awards-venture" aria-label="Accelerator recognition">
+        <article className="award-card award-card--venture" aria-labelledby="tinyfish-title">
+          <div className="award-brand">
+            <img src={aegisLogo} alt="AegisAI logo" loading="lazy" />
+            <span>Agentic brand protection</span>
+          </div>
+          <div className="award-body">
+            <div className="award-meta">
+              <span className="award-badge award-badge--venture">Top 80 / 2,000+</span>
+              <span>2026 · Accelerator selection</span>
+            </div>
+            <h2 id="tinyfish-title">TinyFish Accelerator</h2>
+            <p className="award-project">AegisAI</p>
+            <p>Selected for the TinyFish Accelerator and featured as one of seven builders in its third Pre-Flight cohort announcement.</p>
+            <p>TinyFish recognized AegisAI for agentic counterfeit discovery and investigation for luxury brands, bringing suspicious listings, structured evidence, and actionable findings into one workflow.</p>
+            <div className="award-links">
+              <a href="https://lnkd.in/p/gwPwpKVY" target="_blank" rel="noopener noreferrer">Read recognition post <ArrowOutwardIcon fontSize="small" /></a>
+              <a href="https://youtu.be/AUiwShzJlwY" target="_blank" rel="noopener noreferrer">Watch demo <ArrowOutwardIcon fontSize="small" /></a>
+              <a href="https://www.tinyfish.ai/accelerator" target="_blank" rel="noopener noreferrer">About the accelerator <ArrowOutwardIcon fontSize="small" /></a>
             </div>
           </div>
         </article>

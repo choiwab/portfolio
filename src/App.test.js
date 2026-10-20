@@ -32,7 +32,7 @@ test('renders the Deep Agents and MCP field notes', () => {
   expect(screen.getByText(/reduced the manual-intervention rate by 28 percent/i)).toBeInTheDocument();
 });
 
-test('moves SingHacks to Awards and opens all three recognitions from the menu', () => {
+test('moves SingHacks to Awards and opens all four recognitions from the menu', () => {
   window.history.pushState({}, '', '/extracurriculars');
   render(<App />);
   expect(screen.queryByText(/Singhacks 2025/i)).not.toBeInTheDocument();
@@ -45,6 +45,8 @@ test('moves SingHacks to Awards and opens all three recognitions from the menu',
   expect(screen.getByRole('heading', { name: 'SingHacks 2025' })).toBeInTheDocument();
   expect(screen.getByRole('heading', { name: /OpenAI × Sea Regional Codex Hackathon/ })).toBeInTheDocument();
   expect(screen.getByRole('heading', { name: /NUS SoC Venture Initiation Programme/ })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: 'TinyFish Accelerator' })).toBeInTheDocument();
+  expect(screen.getByRole('link', { name: 'Read recognition post' })).toHaveAttribute('href', 'https://lnkd.in/p/gwPwpKVY');
   expect(screen.getByText('S$10,000 Award')).toBeInTheDocument();
   expect(screen.getByText(/One of 4 teams selected from 150/)).toBeInTheDocument();
   expect(screen.getByRole('img', { name: /Grand Winner award/ })).toBeInTheDocument();
