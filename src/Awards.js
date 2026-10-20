@@ -54,6 +54,7 @@ const Awards = () => {
             <p>Built Synthetic Shoppers with the team: an AI focus group that simulates buyer personas browsing a Shopee-style storefront, helping sellers test product listings before launch.</p>
             <p>Paired browser-use shopper agents and a FastAPI simulation engine with a live React dashboard to surface buyer objections, funnel drop-offs, and simulated conversion changes across listing experiments.</p>
             <div className="award-links">
+              <a href="https://youtu.be/kB_OXku_Nxw" target="_blank" rel="noopener noreferrer">Watch demo <ArrowOutwardIcon fontSize="small" /></a>
               <a href="https://github.com/choiwab/synth-shoppers" target="_blank" rel="noopener noreferrer">Explore the project <ArrowOutwardIcon fontSize="small" /></a>
               <a href="https://www.sea.com/news/407" target="_blank" rel="noopener noreferrer">About the event <ArrowOutwardIcon fontSize="small" /></a>
             </div>
