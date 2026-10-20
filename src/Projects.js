@@ -72,6 +72,13 @@ const Projects = () => {
       videoLink: 'https://youtu.be/AUiwShzJlwY',
       logo: aegisLogo,
       images: [aegisDashboard, aegisDiscoveryConfig, aegisLiveDiscovery, aegisEvidence, aegisCase],
+      imageCaptions: [
+        '1. Dashboard: Monitor findings, open cases, active scans, and risk distribution.',
+        '2. Configure Brand & Discovery: Choose a brand, seed URLs, keywords, and marketplaces for a discovery run.',
+        '3. See Live Agent Discovery: Follow agents browsing websites, with live previews, logs, and run status.',
+        '4. Inspect & Review Findings and Evidence: Review listing details, risk scores, and captured evidence before taking action.',
+        '5. Escalate Case: Track escalated findings, investigation status, and analyst activity in one case.',
+      ],
       languages: ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'Celery', 'TinyFish Web Agent', 'Next.js', 'TypeScript', 'Pydantic', 'Docker', 'Supabase'],
     },
     {
@@ -295,7 +302,14 @@ const Projects = () => {
                 >
                   {projects[selectedProject].images.map((image, idx) => (
                     <SwiperSlide key={idx}>
-                      <img src={image} alt={`${projects[selectedProject].title} screenshot ${idx + 1}`} style={{ width: '100%', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.08)' }} />
+                      <Box component="figure" sx={{ m: 0 }}>
+                        <img src={image} alt={`${projects[selectedProject].title} screenshot ${idx + 1}`} style={{ width: '100%', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.08)' }} />
+                        {projects[selectedProject].imageCaptions?.[idx] && (
+                          <Typography component="figcaption" variant="body2" sx={{ mt: 1.5, color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
+                            {projects[selectedProject].imageCaptions[idx]}
+                          </Typography>
+                        )}
+                      </Box>
                     </SwiperSlide>
                   ))}
                 </Swiper>
