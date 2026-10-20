@@ -14,9 +14,7 @@ const Awards = () => {
   return (
     <main className="awards-page">
       <header className="awards-header">
-        <span className="awards-eyebrow"><EmojiEventsOutlinedIcon fontSize="small" /> Selected achievements</span>
         <h1>Awards &amp; recognition</h1>
-        <p>Hackathon wins and venture milestones across AI, fintech, and entrepreneurship.</p>
       </header>
 
       <section className="awards-grid" aria-label="Hackathon awards">

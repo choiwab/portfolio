@@ -26,6 +26,14 @@ Check out my website here: [My Portfolio](https://jaechoi.vercel.app/)
    - LinkedIn 💼
    - Email 📧
 
+### CI/CD
+
+GitHub Actions runs tests and a production build on pull requests targeting `main` and pushes to `main`, using Node.js 24 and `npm ci`.
+
+Vercel automatically deploys `main` to [jaechoi.vercel.app](https://jaechoi.vercel.app/). Its build command runs the same tests and build, so a failing check prevents the new deployment from going live. Other branches receive preview deployments through the existing Vercel GitHub integration.
+
+Run the same checks locally with `CI=true npm run check`.
+
 ### 💡 Fun Fact
 Did you know? Elon Musk once tweeted that he was considering buying Coca-Cola to "put the cocaine back in."
 
